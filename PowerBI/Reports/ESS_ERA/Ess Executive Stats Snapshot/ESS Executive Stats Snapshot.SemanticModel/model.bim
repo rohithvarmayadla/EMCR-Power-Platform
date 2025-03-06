@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"src_era_rpt FactEvacuees\",\"src_era_rpt FactSupport\",\"src_era_rpt DimTask\",\"src_era_rpt FactActiveTask\",\"src_era_rpt DimSupportDeliveryType\",\"src_era_rpt DimSupportType\",\"src_era_rpt DimLocation\",\"src_D_DATE\",\"src_era_rpt DimEvacuationFile\",\"trans_era_rpt FactEvacuees\",\"trans_era_rpt FactSupport\",\"trans_era_rpt DimTask\",\"trans_era_rpt FactActiveTask\",\"trans_era_rpt DimSupportDeliveryType\",\"trans_era_rpt DimSupportType\",\"trans_era_rpt DimLocation\",\"trans_D_DATE\",\"trans_era_rpt DimEvacuationFile\",\"Evacuees\",\"Support\",\"Task\",\"ActiveTask\",\"SupportDeliveryType\",\"SupportType\",\"TaskLocation\",\"Date\",\"EvacuationFile\",\"Metrics\"]"
+        "value": "[\"src_era_rpt FactEvacuees\",\"src_era_rpt FactSupport\",\"src_era_rpt DimTask\",\"src_era_rpt FactActiveTask\",\"src_era_rpt DimSupportDeliveryType\",\"src_era_rpt DimSupportType\",\"src_era_rpt DimLocation\",\"src_D_DATE\",\"src_era_rpt DimEvacuationFile\",\"trans_era_rpt FactEvacuees\",\"trans_era_rpt FactSupport\",\"trans_era_rpt DimTask\",\"trans_era_rpt FactActiveTask\",\"trans_era_rpt DimSupportDeliveryType\",\"trans_ActiveSupportBridge\",\"trans_era_rpt DimSupportType\",\"trans_era_rpt DimLocation\",\"trans_D_DATE\",\"trans_era_rpt DimEvacuationFile\",\"Evacuees\",\"Support\",\"Task\",\"ActiveTask\",\"ActiveSupportBridge\",\"SupportDeliveryType\",\"SupportType\",\"TaskLocation\",\"Date\",\"EvacuationFile\",\"Metrics\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -12333,6 +12333,33 @@
         "kind": "m",
         "lineageTag": "95b47a4a-48ea-4fd7-92ca-8f83a16c5481",
         "queryGroup": "Source"
+      },
+      {
+        "name": "trans_ActiveSupportBridge",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = #\"src_era_rpt FactSupport\",",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"ValidToDate\", Int64.Type}, {\"ValidFromDate\", Int64.Type}}),",
+          "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Date\", each try {[ValidFromDate]..[ValidToDate]} otherwise null),",
+          "    #\"Expanded Custom\" = Table.ExpandListColumn(#\"Added Custom\", \"Date\"),",
+          "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Expanded Custom\",{{\"Date\", type date}}),",
+          "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type1\",{\"DimSupportTypeBK\", \"TotalAmount\", \"DimTaskBK\", \"TaskStartDate\", \"TaskEndDate\", \"DimLocationBK_Task\", \"DimLocationBK_EvacuatedFrom\", \"DimEvacuationFileStatusBK\", \"ValidFromDate\", \"ValidToDate\", \"DimEvacuationFileBK\", \"DimSupportDeliveryTypeBK\", \"DimSupportStatusBK\", \"Source\"})",
+          "in",
+          "    #\"Removed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "036dfa9c-c9d6-4f98-acda-23a9458e30af",
+        "queryGroup": "Transformation"
       }
     ],
     "queryGroups": [
@@ -12389,13 +12416,6 @@
         "toTable": "TaskLocation"
       },
       {
-        "name": "b80d2c48-ed79-9d8e-9576-eff3bdf05f89",
-        "fromColumn": "Date",
-        "fromTable": "ActiveTask",
-        "toColumn": "CAL_DAY_DT",
-        "toTable": "Date"
-      },
-      {
         "name": "6916dbe1-328f-d42f-5ab7-c19c9425c9c3",
         "crossFilteringBehavior": "bothDirections",
         "fromColumn": "DimSupportDeliveryTypeBK",
@@ -12426,6 +12446,21 @@
         "fromTable": "Support",
         "toColumn": "DimEvacuationFileBK",
         "toTable": "EvacuationFile"
+      },
+      {
+        "name": "76aceac6-ea8c-89dc-43f1-58826f89d2f4",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "FactSupportBK",
+        "fromTable": "ActiveSupportBridge",
+        "toColumn": "FactSupportBK",
+        "toTable": "Support"
+      },
+      {
+        "name": "4663921e-e254-a7d6-4351-8cf985460b29",
+        "fromColumn": "Date",
+        "fromTable": "ActiveSupportBridge",
+        "toColumn": "CAL_DAY_DT",
+        "toTable": "Date"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -14282,6 +14317,82 @@
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}})",
                 "in",
                 "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ActiveSupportBridge",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FactSupportBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86f5314f-b1d0-4f26-a092-75216eff0143",
+            "sourceColumn": "FactSupportBK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DimTaskBK_EvacuationFile",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "40e018d1-dcfc-495f-9a9e-df1e0beb2a50",
+            "sourceColumn": "DimTaskBK_EvacuationFile",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "8068a144-045d-4381-bd3c-a9b39b30eaae",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a758f376-9c32-4685-986c-f27fa68c0329",
+        "partitions": [
+          {
+            "name": "ActiveSupportBridge",
+            "mode": "import",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_ActiveSupportBridge",
+                "in",
+                "    Source"
               ],
               "type": "m"
             }
