@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"src_FactETransferTransaction\",\"src_DimSupportType\",\"src_DimETransferTransactionStatus\",\"src_DimSupport\",\"src_FactSupport\",\"src_DimDate\",\"trans_FactETransferTransaction\",\"trans_DimSupportType\",\"trans_FactSupport\",\"trans_DimETransferTransactionStatus\",\"trans_DimSupport\",\"trans_DimDate\",\"ETransferTransaction\",\"SupportType\",\"ETransferTransactionStatus\",\"Supports\",\"Support\",\"Date\"]"
+        "value": "[\"src_FactETransferTransaction\",\"src_DimSupportType\",\"src_DimETransferTransactionStatus\",\"src_DimSupport\",\"src_DimTask\",\"src_FactSupport\",\"src_DimDate\",\"trans_FactETransferTransaction\",\"trans_DimSupportType\",\"trans_FactSupport\",\"trans_DimETransferTransactionStatus\",\"trans_DimSupport\",\"trans_DimTask\",\"trans_DimDate\",\"ETransferTransaction\",\"SupportType\",\"ETransferTransactionStatus\",\"Supports\",\"Task\",\"Support\",\"Date\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -189,9 +189,10 @@
         ],
         "expression": [
           "let",
-          "    Source = src_DimSupportType",
+          "    Source = src_DimSupportType,",
+          "    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Source] = \"ERA Dynamics\"))",
           "in",
-          "    Source"
+          "    #\"Filtered Rows\""
         ],
         "kind": "m",
         "lineageTag": "e41f77be-6b56-4aa9-b99b-bf49d622ab9f",
@@ -233,9 +234,10 @@
         ],
         "expression": [
           "let",
-          "    Source = src_DimSupport",
+          "    Source = src_DimSupport,",
+          "    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Source] = \"ERA Dynamics\"))",
           "in",
-          "    Source"
+          "    #\"Filtered Rows\""
         ],
         "kind": "m",
         "lineageTag": "de960232-61c6-46e0-959d-ee96eeeb7569",
@@ -255,9 +257,10 @@
         ],
         "expression": [
           "let",
-          "    Source = src_DimDate",
+          "    Source = src_DimDate,",
+          "    Filter = Table.SelectRows(Source, each [CAL_DAY_DT] >= #datetime(2022, 5, 1, 0, 0, 0) and [CAL_DAY_DT] < DateTime.LocalNow())",
           "in",
-          "    Source"
+          "    Filter"
         ],
         "kind": "m",
         "lineageTag": "22306645-807f-44b4-a5e0-48cd86b5d00e",
@@ -300,12 +303,59 @@
         ],
         "expression": [
           "let",
-          "    Source = src_FactSupport",
+          "    Source = src_FactSupport,",
+          "    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Source] = \"ERA Dynamics\"))",
           "in",
-          "    Source"
+          "    #\"Filtered Rows\""
         ],
         "kind": "m",
         "lineageTag": "046f1ae4-c272-43c3-8504-bb1c1a602462",
+        "queryGroup": "Transformation"
+      },
+      {
+        "name": "src_DimTask",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    era_rpt_DimTask = Source{[Schema=\"era_rpt\",Item=\"DimTask\"]}[Data]",
+          "in",
+          "    era_rpt_DimTask"
+        ],
+        "kind": "m",
+        "lineageTag": "86f79d2b-ee9b-44c5-83a5-22b94f98b74b",
+        "queryGroup": "Source"
+      },
+      {
+        "name": "trans_DimTask",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_DimTask,",
+          "    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Source] = \"ERA Dynamics\"))",
+          "in",
+          "    #\"Filtered Rows\""
+        ],
+        "kind": "m",
+        "lineageTag": "b4a672b2-8d06-45a3-8bb8-f23d64667ecc",
         "queryGroup": "Transformation"
       }
     ],
@@ -375,6 +425,13 @@
         "fromTable": "ETransferTransaction",
         "toColumn": "CAL_DAY_DT",
         "toTable": "Date"
+      },
+      {
+        "name": "eb436053-e87f-bb61-0d5a-5370cf4fd4c4",
+        "fromColumn": "DimTaskBK",
+        "fromTable": "Supports",
+        "toColumn": "DimTaskBK",
+        "toTable": "Task"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -455,10 +512,14 @@
               {
                 "name": "UnderlyingDateTimeDataType",
                 "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
               }
             ],
             "dataType": "dateTime",
-            "formatString": "Long Date",
+            "formatString": "yyyy-mm-dd",
             "lineageTag": "793b6ca8-2684-4253-9248-8e637b56edd8",
             "sourceColumn": "CreatedOnDate",
             "summarizeBy": "none"
@@ -473,10 +534,14 @@
               {
                 "name": "UnderlyingDateTimeDataType",
                 "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
               }
             ],
             "dataType": "dateTime",
-            "formatString": "Long Date",
+            "formatString": "yyyy-mm-dd",
             "lineageTag": "b3109046-41e8-4637-a120-5da17c5c87a6",
             "sourceColumn": "CASResponseDate",
             "summarizeBy": "none"
@@ -776,10 +841,14 @@
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
               }
             ],
             "dataType": "dateTime",
-            "formatString": "General Date",
+            "formatString": "yyyy-mm-dd",
             "lineageTag": "900e1aa6-ac8f-4d18-9b15-35b9b5b52853",
             "sourceColumn": "CAL_DAY_DT",
             "summarizeBy": "none"
@@ -1378,6 +1447,144 @@
               "expression": [
                 "let",
                 "    Source = trans_FactSupport",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DimTaskBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf95205c-a2b8-417b-9baf-01e9cb774042",
+            "sourceColumn": "DimTaskBK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Task Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22bb25ed-0f1d-4ade-9781-fefc92f28700",
+            "sourceColumn": "Task Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SupportPathway",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e0ad795d-eb55-4b01-b5d9-54eeddfa8fa0",
+            "sourceColumn": "SupportPathway",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IncidentCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7995be44-f282-4e51-b7a8-4d27a4e2eba6",
+            "sourceColumn": "IncidentCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EventLevel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5a79649-f1d9-423b-8ede-c93d005e6a86",
+            "sourceColumn": "EventLevel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TaskStartDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "b39dc63e-9835-408e-9a17-b58c3cbab74a",
+            "sourceColumn": "TaskStartDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TaskEndDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "3efea94e-dc52-4d15-a339-d2969db299a8",
+            "sourceColumn": "TaskEndDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Source",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b0afc5f9-f8ac-4072-8754-6ba94fd46fd8",
+            "sourceColumn": "Source",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "82fcc8d3-6ab4-45cc-9d9e-d70b48c15e44",
+        "partitions": [
+          {
+            "name": "Task",
+            "mode": "import",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_DimTask",
                 "in",
                 "    Source"
               ],
