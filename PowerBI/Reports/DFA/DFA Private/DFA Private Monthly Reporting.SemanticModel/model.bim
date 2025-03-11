@@ -78848,7 +78848,11 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -81859,6 +81863,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -81938,6 +81946,19 @@
             "dataType": "string",
             "lineageTag": "794d3d06-7e45-45c6-aea0-e0e19dffad40",
             "sourceColumn": "IsActive",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HazardType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "49b239eb-4cd0-4aea-881f-9915adf3d8b6",
+            "sourceColumn": "HazardType",
             "summarizeBy": "none"
           }
         ],
@@ -89087,7 +89108,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -92631,6 +92652,23 @@
             "lineageTag": "bbc08b61-af8b-4afc-bafc-0e3b81bd5bb2",
             "sourceColumn": "FactProjectClaim_Sk",
             "summarizeBy": "none"
+          },
+          {
+            "name": "TotalAfterPercentCut",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "95a20b8d-d4f4-4649-8d77-05fcba98285c",
+            "sourceColumn": "TotalAfterPercentCut",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "fb46b80f-f753-498d-858f-17ca6f382e79",
@@ -93777,7 +93815,11 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
