@@ -19854,7 +19854,9 @@
                       "Weight": 0.99
                     }
                   },
-                  {},
+                  {
+                    "": {}
+                  },
                   {
                     "project location": {
                       "Source": {
@@ -52894,6 +52896,16 @@
                       "Type": "Noun",
                       "Weight": 0.482
                     }
+                  },
+                  {
+                    "Total Committed Funds Unspent": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -53910,7 +53922,7 @@
                     }
                   },
                   {
-                    "Total committed funds unspent": {
+                    "Total Committed Funds Unspent": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
