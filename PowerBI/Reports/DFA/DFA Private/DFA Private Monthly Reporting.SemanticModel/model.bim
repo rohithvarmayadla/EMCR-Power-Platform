@@ -78851,6 +78851,14 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_9d90fb79-7a97-431f-848c-a2f347c04d6d"
+      },
+      {
+        "name": "a942e71c-eaab-4206-a9a1-685b3fe19d4a",
+        "fromColumn": "ClosePayStartedDate",
+        "fromTable": "FactCase",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13"
       }
     ],
     "sourceQueryCulture": "en-CA",
@@ -83280,7 +83288,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -84870,6 +84878,31 @@
                 },
                 "isDefault": true,
                 "relationship": "a9520827-c9f9-49e4-9635-595f59c6e399"
+              }
+            ]
+          },
+          {
+            "name": "ClosePayStartedDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "d07dd7ef-176e-4292-85f4-405dd901757b",
+            "sourceColumn": "ClosePayStartedDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13"
+                },
+                "isDefault": true,
+                "relationship": "a942e71c-eaab-4206-a9a1-685b3fe19d4a"
               }
             ]
           }
@@ -90985,7 +91018,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -92424,7 +92457,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -95229,7 +95262,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -95316,7 +95349,7 @@
               "expression": [
                 "let",
                 "    Source = FactCase,",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"FactCase_Sk\"}),",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"ClosePayStartedDate\", \"FactCase_Sk\"}),",
                 "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"FactCase_Sk\"}, \"Attribute\", \"Value\"),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Unpivoted Other Columns\",{{\"Attribute\", \"DateKey\"}, {\"Value\", \"DateValue\"}}),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"DateValue\", type date}}),",
@@ -95967,7 +96000,7 @@
           },
           {
             "name": "Cases Closed",
-            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"BPFFinishedDate\"))",
+            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
             "formatString": "0",
             "lineageTag": "4f34c543-09cc-4451-878a-2de6b0b5b6de"
           },
@@ -96073,6 +96106,29 @@
             "name": "Projects Approved + Cost",
             "expression": "[Projects Approved and Under Construction] & \" (\" & FORMAT([Project ApprovedCost Amount], \"Currency\") & \")\"",
             "lineageTag": "b6d09668-70bf-441b-91aa-3c18f6a0dc9d"
+          },
+          {
+            "name": "Applications Closed Ineligible",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "a9b7dcac-e95d-4872-b602-d4b37f735fa9"
+          },
+          {
+            "name": "Applications Closed Withdrawn",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "bf037e49-a03b-431b-9c79-7e0161c6b1bd"
+          },
+          {
+            "name": "Applications Closed Eligible",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "dbdd40d6-f63a-4e12-ad4c-bb24b035647b"
+          },
+          {
+            "name": "Case Total Paid",
+            "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid]), FILTER('AllDates FactCase Bridge', [DateKey]=\"ClosePayStartedDate\")), \"Currency\")",
+            "lineageTag": "5908efa4-afbe-4f8f-8314-7a5ebd2c1c61"
           }
         ],
         "partitions": [
@@ -99963,6 +100019,207 @@
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(Year(MIN('FactCase'[CaseUpdatedOnDate])), 1, 1), Date(Year(MAX('FactCase'[CaseUpdatedOnDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "c07da066-027b-42fd-b134-fa79f06e6ee5",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "3920967c-0c2c-40e8-8fd9-acc93cb6e828",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "92e9f29d-7893-46f1-aef8-efba7a3c4558",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "dae3c0fb-8ac8-43fe-adc7-828e0f1d9c51",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "6d0c0840-98f1-4790-82b3-17e80dcc6b01",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "e6866600-3e1f-48c5-b3fc-3bd086d322dd",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "59438155-584c-48da-9849-7f1b411734a6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "7dff4240-089d-4787-a0d1-0432cd91d147",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "0f850365-e98e-4d6b-b4f7-feecff7e37c7",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "5f7836d3-3a51-4f62-be0c-40720efa7395",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "cdfeb6b0-9586-4910-b6b9-c5ad78d9398a",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "e4eb3924-9db9-43ad-9742-e798d7913ca4"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "3297984c-8b8e-4d1d-af25-85f7d4a7da43",
+        "partitions": [
+          {
+            "name": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('FactCase'[ClosePayStartedDate])), 1, 1), Date(Year(MAX('FactCase'[ClosePayStartedDate])), 12, 31))",
               "type": "calculated"
             }
           }
