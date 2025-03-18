@@ -52623,7 +52623,7 @@
                     }
                   },
                   {
-                    "Community Applications Closed": {
+                    "Applications Closed": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -52749,7 +52749,7 @@
                     }
                   },
                   {
-                    "Community Applications Opened": {
+                    "Applications Opened": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -95229,7 +95229,11 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "changedProperties": [
@@ -95312,7 +95316,7 @@
               "expression": [
                 "let",
                 "    Source = FactCase,",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"FactCase_Sk\", \"BringForwardDate\", \"CRPReceivedDate\", \"ReturnToTheResidenceDate\", \"ReportCompletedDate\", \"ReceivedDate\", \"DamageToDate\", \"DamageDate\", \"OfApplicantSiteVisitDate\", \"FileClosedDate\", \"EvaluationFileReceivedDate\", \"ReceivedByFMDate\", \"AssignedToFMDate\", \"AssignedDate\", \"ApplicantContactedDate\", \"EvaluationReportReceivedDate\", \"LetterOfAcknowledgmentDate\", \"PrimaryApplicantSignedDate\", \"SecondaryApplicantSignedDate\", \"TotalProvincialEligibleAmountDate\", \"TotalIneligibleAmountDate\", \"TotalFederalClaimAmountDate\", \"CreatedDate\"}),",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"FactCase_Sk\"}),",
                 "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"FactCase_Sk\"}, \"Attribute\", \"Value\"),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Unpivoted Other Columns\",{{\"Attribute\", \"DateKey\"}, {\"Value\", \"DateValue\"}}),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"DateValue\", type date}}),",
@@ -95963,7 +95967,7 @@
           },
           {
             "name": "Cases Closed",
-            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"FileClosedDate\"))",
+            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"BPFFinishedDate\"))",
             "formatString": "0",
             "lineageTag": "4f34c543-09cc-4451-878a-2de6b0b5b6de"
           },
