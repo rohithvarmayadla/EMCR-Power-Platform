@@ -53138,16 +53138,6 @@
                       "Type": "Noun",
                       "Weight": 0.508
                     }
-                  },
-                  {
-                    "Project Approved Cost": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -54968,6 +54958,27 @@
                 "Visibility": {
                   "Value": "Hidden"
                 }
+              },
+              "monthlyreportmeasures.case_total_paid": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Case Total Paid"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Paid": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
               },
               "time_series": {
                 "Definition": {
