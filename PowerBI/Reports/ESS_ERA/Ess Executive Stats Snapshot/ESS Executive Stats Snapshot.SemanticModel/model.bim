@@ -12461,6 +12461,14 @@
         "fromTable": "ActiveSupportBridge",
         "toColumn": "CAL_DAY_DT",
         "toTable": "Date"
+      },
+      {
+        "name": "8abfbb24-1d00-3232-251f-a16246e16762",
+        "fromColumn": "Date",
+        "fromTable": "ActiveTask",
+        "isActive": false,
+        "toColumn": "CAL_DAY_DT",
+        "toTable": "Date"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -13056,6 +13064,19 @@
             "dataType": "string",
             "lineageTag": "4e0c93f0-b949-4506-ab11-f29bd4529746",
             "sourceColumn": "DimTaskBK_EvacuationFile",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DimSupportBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2d079e6d-7132-4bba-b327-5e16e79958a6",
+            "sourceColumn": "DimSupportBK",
             "summarizeBy": "none"
           }
         ],
@@ -14301,7 +14322,13 @@
                 "property": "IsHidden"
               }
             ],
-            "expression": "max(ActiveTask[CurrentDayCount])",
+            "expression": [
+              "",
+              "var TaskStart = max('Support'[TaskStartDate])",
+              "var CurrentRangeEnd = max('Date'[CAL_DAY_DT])",
+              "var result = datediff(TaskStart, CurrentRangeEnd, DAY)",
+              "return result"
+            ],
             "formatString": "0",
             "lineageTag": "f425a59a-8b3b-45a6-82f1-c9466eb04381"
           }
@@ -14378,6 +14405,19 @@
             "formatString": "Long Date",
             "lineageTag": "8068a144-045d-4381-bd3c-a9b39b30eaae",
             "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DimSupportBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "41f1a118-60d7-42db-a086-3b0e17461d1a",
+            "sourceColumn": "DimSupportBK",
             "summarizeBy": "none"
           }
         ],

@@ -25,8 +25,115 @@
         "name": "en-US",
         "linguisticMetadata": {
           "content": {
+            "Entities": {
+              "etransfertransaction.casresponsedate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ETransferTransaction",
+                    "ConceptualProperty": "CASResponseDate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "CAS Response Date": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "etransfertransaction.createdondate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ETransferTransaction",
+                    "ConceptualProperty": "CreatedOnDate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Created On Date": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "etransfertransaction.transactionid": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ETransferTransaction",
+                    "ConceptualProperty": "TransactionID"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Transaction ID": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "etransfertransactionstatus.statusreason": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ETransferTransactionStatus",
+                    "ConceptualProperty": "StatusReason"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Status Reason": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "support.supportnumber": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Support",
+                    "ConceptualProperty": "SupportNumber"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Support Number": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
             "Language": "en-US",
-            "Version": "1.0.0"
+            "Version": "2.0.0"
           },
           "contentType": "json"
         }
@@ -391,6 +498,7 @@
     "relationships": [
       {
         "name": "AutoDetected_94e71b30-3ccb-4bb0-b673-ac43d397809c",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "DimSupportBK",
         "fromTable": "ETransferTransaction",
         "toColumn": "DimSupportBK",
@@ -398,19 +506,11 @@
       },
       {
         "name": "AutoDetected_f111ef5a-e885-474f-b71b-7bd5124ef87a",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "DimETransferTransactionStatusBK",
         "fromTable": "ETransferTransaction",
         "toColumn": "DimETransferTransactionStatusBK",
         "toTable": "ETransferTransactionStatus"
-      },
-      {
-        "name": "AutoDetected_8e0c0e4a-a579-476d-8169-a24950cb82d5",
-        "crossFilteringBehavior": "bothDirections",
-        "fromCardinality": "one",
-        "fromColumn": "DimSupportBK",
-        "fromTable": "Supports",
-        "toColumn": "DimSupportBK",
-        "toTable": "Support"
       },
       {
         "name": "AutoDetected_6515b8f1-81af-4162-9456-c7e7141cd624",
@@ -432,6 +532,14 @@
         "fromTable": "Supports",
         "toColumn": "DimTaskBK",
         "toTable": "Task"
+      },
+      {
+        "name": "b493d506-3e0a-23c2-1e3b-4f80b6b8011d",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "DimSupportBK",
+        "fromTable": "Support",
+        "toColumn": "DimSupportBK",
+        "toTable": "Supports"
       }
     ],
     "sourceQueryCulture": "en-US",
