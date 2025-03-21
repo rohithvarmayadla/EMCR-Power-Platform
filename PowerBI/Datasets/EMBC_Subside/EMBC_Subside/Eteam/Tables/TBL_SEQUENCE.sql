@@ -1,0 +1,7 @@
+﻿CREATE TABLE [Eteam].[TBL_SEQUENCE] (
+    [SEQUENCE_NAME] NVARCHAR (30) NOT NULL,
+    [STARTS_WITH]   INT           NULL,
+    [INCREMENT_BY]  INT           NULL,
+    [CURRENT_VAL]   INT           NULL
+);
+

@@ -1,0 +1,2 @@
+﻿
+CREATE VIEW [EMBCPROD].[activitysubmission] AS SELECT id,DTYPE,activityid,currentstate,submitterid,activitysubmission_form_id,ignorerole,tasknotificationsubject,tasknotificationmessage,skipped,url,resetdate FROM [Eteam_Ora].[activitysubmission]  UNION ALL   SELECT id,DTYPE,activityid,currentstate,submitterid,activitysubmission_form_id,ignorerole,tasknotificationsubject,tasknotificationmessage,skipped,url,resetdate FROM [Eteam].[activitysubmission]

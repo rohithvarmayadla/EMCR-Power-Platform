@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [ERA_RLS1]
+    AUTHORIZATION [dbo];
+

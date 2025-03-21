@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PBI_Training_DFA]
+    AUTHORIZATION [dbo];
+

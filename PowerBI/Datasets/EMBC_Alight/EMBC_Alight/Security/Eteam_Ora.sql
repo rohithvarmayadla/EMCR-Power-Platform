@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Eteam_Ora]
+    AUTHORIZATION [dbo];
+
