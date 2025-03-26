@@ -26,6 +26,588 @@
         "linguisticMetadata": {
           "content": {
             "Entities": {
+              "active_support_bridge": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveSupportBridge"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "active support bridge": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ActiveSupportBridge": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "bridge": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "support bridge": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "active assistance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "active cooperation bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "active maintenance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "active sustenance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "active validation bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "active verification bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "assistance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "cooperation bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "maintenance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "sustenance bridge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  }
+                ]
+              },
+              "active_support_bridge.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveSupportBridge",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "active_support_bridge.dim_support_BK": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveSupportBridge",
+                    "ConceptualProperty": "DimSupportBK"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dim support BK": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "DimSupportBK": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "support BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "dim assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim validation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim verification bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  }
+                ]
+              },
+              "active_support_bridge.dim_task_BK_evacuation_file": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveSupportBridge",
+                    "ConceptualProperty": "DimTaskBK_EvacuationFile"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dim task BK evacuation file": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "DimTaskBK_EvacuationFile": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "file": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "BK evacuation file": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "task BK evacuation file": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "dim task bk evacuation folder": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.52
+                    }
+                  },
+                  {
+                    "dim task bk evacuation dossier": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.52
+                    }
+                  },
+                  {
+                    "dim task bk evacuation organizer": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.52
+                    }
+                  },
+                  {
+                    "dim task bk evacuation categorizer": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.52
+                    }
+                  },
+                  {
+                    "dim task bk evacuation wallet": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.52
+                    }
+                  },
+                  {
+                    "task bk evacuation folder": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "task bk evacuation dossier": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "task bk evacuation organizer": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "task bk evacuation categorizer": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  },
+                  {
+                    "task bk evacuation wallet": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.514
+                    }
+                  }
+                ]
+              },
+              "active_support_bridge.fact_support_BK": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveSupportBridge",
+                    "ConceptualProperty": "FactSupportBK"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "fact support BK": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "FactSupportBK": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "support BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "fact assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact validation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact verification bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  }
+                ]
+              },
               "active_task": {
                 "Definition": {
                   "Binding": {
@@ -287,11 +869,20 @@
                       "Type": "Noun",
                       "Weight": 0.461
                     }
+                  },
+                  {
+                    "days": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "day": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
                   }
-                ],
-                "Visibility": {
-                  "Value": "Hidden"
-                }
+                ]
               },
               "active_task.current_day_count": {
                 "Definition": {
@@ -315,12 +906,6 @@
                     }
                   },
                   {
-                    "day count": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
                     "current day amount": {
                       "Source": {
                         "Agent": "Thesaurus"
@@ -328,16 +913,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.739
-                    }
-                  },
-                  {
-                    "day amount": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
                     }
                   },
                   {
@@ -380,7 +955,10 @@
                       "Weight": 0.484
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "active_task.date": {
                 "Definition": {
@@ -1015,6 +1593,59 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.6
+                    }
+                  }
+                ]
+              },
+              "active_task.total_day_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ActiveTask",
+                    "ConceptualProperty": "TotalDayCount"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total day count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TotalDayCount": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "total day amount": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "aggregate day count": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "overall day count": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
                     }
                   }
                 ]
@@ -4242,6 +4873,49 @@
                   "Value": "Hidden"
                 }
               },
+              "metrics.day_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Metrics",
+                    "ConceptualProperty": "DayCount"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "day count": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "DayCount": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "day amount": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "FilteredDayCount": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
               "metrics.evacuee": {
                 "Definition": {
                   "Binding": {
@@ -5247,6 +5921,144 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.599
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "support.dim_support_BK": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Support",
+                    "ConceptualProperty": "DimSupportBK"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dim support BK": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "DimSupportBK": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "support BK": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "dim assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim validation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "dim verification bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "assistance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "cooperation bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "maintenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "sustenance bk": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
                     }
                   }
                 ],
@@ -9416,75 +10228,42 @@
             },
             "Language": "en-US",
             "Relationships": {
-              "active_task_has_current_day": {
+              "active_support_bridge_has_date": {
                 "Binding": {
-                  "ConceptualEntity": "ActiveTask"
+                  "ConceptualEntity": "ActiveSupportBridge"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "active_task.current_day"
+                        "Role": "active_support_bridge.date"
                       },
                       "Subject": {
-                        "Role": "active_task"
+                        "Role": "active_support_bridge"
                       }
                     },
-                    "ID": "active_tasks_have_current_days",
+                    "ID": "active_support_bridges_have_dates",
                     "State": "Generated",
                     "Weight": 0.99
                   }
                 ],
                 "Roles": {
-                  "active_task": {
+                  "active_support_bridge": {
                     "Target": {
-                      "Entity": "active_task"
+                      "Entity": "active_support_bridge"
                     }
                   },
-                  "active_task.current_day": {
+                  "active_support_bridge.date": {
                     "Target": {
-                      "Entity": "active_task.current_day"
+                      "Entity": "active_support_bridge.date"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "active_task_has_current_day_count": {
+              "active_support_bridge_has_date1": {
                 "Binding": {
-                  "ConceptualEntity": "ActiveTask"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "active_task.current_day_count"
-                      },
-                      "Subject": {
-                        "Role": "active_task"
-                      }
-                    },
-                    "ID": "active_tasks_have_current_day_counts",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "active_task": {
-                    "Target": {
-                      "Entity": "active_task"
-                    }
-                  },
-                  "active_task.current_day_count": {
-                    "Target": {
-                      "Entity": "active_task.current_day_count"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "active_task_has_date": {
-                "Binding": {
-                  "ConceptualEntity": "ActiveTask"
+                  "ConceptualEntity": "ActiveSupportBridge"
                 },
                 "Phrasings": [
                   {
@@ -9493,36 +10272,206 @@
                         "Role": "date"
                       },
                       "Subject": {
-                        "Role": "active_task"
+                        "Role": "active_support_bridge"
                       }
                     },
-                    "ID": "active_tasks_have_dates",
+                    "ID": "active_support_bridges_have_dates1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "active_task"
+                        "Role": "active_support_bridge"
                       },
                       "Subject": {
                         "Role": "date"
                       }
                     },
-                    "ID": "dates_have_active_tasks",
+                    "ID": "dates_have_active_support_bridges",
                     "State": "Generated",
                     "Weight": 0.99
                   }
                 ],
                 "Roles": {
-                  "active_task": {
+                  "active_support_bridge": {
                     "Target": {
-                      "Entity": "active_task"
+                      "Entity": "active_support_bridge"
                     }
                   },
                   "date": {
                     "Target": {
                       "Entity": "date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_support_bridge_has_dim_support_BK": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveSupportBridge"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "active_support_bridge.dim_support_BK"
+                      },
+                      "Subject": {
+                        "Role": "active_support_bridge"
+                      }
+                    },
+                    "ID": "active_support_bridges_have_dim_support_BKs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "active_support_bridge": {
+                    "Target": {
+                      "Entity": "active_support_bridge"
+                    }
+                  },
+                  "active_support_bridge.dim_support_BK": {
+                    "Target": {
+                      "Entity": "active_support_bridge.dim_support_BK"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_support_bridge_has_dim_task_BK_evacuation_file": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveSupportBridge"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "active_support_bridge.dim_task_BK_evacuation_file"
+                      },
+                      "Subject": {
+                        "Role": "active_support_bridge"
+                      }
+                    },
+                    "ID": "active_support_bridges_have_dim_task_BK_evacuation_files",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "active_support_bridge": {
+                    "Target": {
+                      "Entity": "active_support_bridge"
+                    }
+                  },
+                  "active_support_bridge.dim_task_BK_evacuation_file": {
+                    "Target": {
+                      "Entity": "active_support_bridge.dim_task_BK_evacuation_file"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_support_bridge_has_fact_support_BK": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveSupportBridge"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "active_support_bridge.fact_support_BK"
+                      },
+                      "Subject": {
+                        "Role": "active_support_bridge"
+                      }
+                    },
+                    "ID": "active_support_bridges_have_fact_support_BKs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "active_support_bridge": {
+                    "Target": {
+                      "Entity": "active_support_bridge"
+                    }
+                  },
+                  "active_support_bridge.fact_support_BK": {
+                    "Target": {
+                      "Entity": "active_support_bridge.fact_support_BK"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_support_bridge_has_support": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveSupportBridge"
+                },
+                "Roles": {
+                  "active_support_bridge": {
+                    "Target": {
+                      "Entity": "active_support_bridge"
+                    }
+                  },
+                  "support": {
+                    "Target": {
+                      "Entity": "support"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_task_has_active_10_plus_days": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveTask"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "active_task.active_10_plus_days"
+                      },
+                      "Subject": {
+                        "Role": "active_task"
+                      }
+                    },
+                    "ID": "active_tasks_have_active_10_plus_days",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "active_tasks_are_plus_active_10_plus_days",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "active_task.active_10_plus_days"
+                      },
+                      "Prepositions": [
+                        {
+                          "plus": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "active_task"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "active_task": {
+                    "Target": {
+                      "Entity": "active_task"
+                    }
+                  },
+                  "active_task.active_10_plus_days": {
+                    "Target": {
+                      "Entity": "active_task.active_10_plus_days"
                     }
                   }
                 },
@@ -9556,6 +10505,39 @@
                   "metrics.active_tasks": {
                     "Target": {
                       "Entity": "metrics.active_tasks"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "active_task_has_metrics_day_count": {
+                "Binding": {
+                  "ConceptualEntity": "ActiveTask"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "metrics.day_count"
+                      },
+                      "Subject": {
+                        "Role": "active_task"
+                      }
+                    },
+                    "ID": "active_tasks_have_day_count",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "active_task": {
+                    "Target": {
+                      "Entity": "active_task"
+                    }
+                  },
+                  "metrics.day_count": {
+                    "Target": {
+                      "Entity": "metrics.day_count"
                     }
                   }
                 },
@@ -9719,7 +10701,7 @@
                 },
                 "State": "Generated"
               },
-              "active_task_has_total_day": {
+              "active_task_has_total_day_count": {
                 "Binding": {
                   "ConceptualEntity": "ActiveTask"
                 },
@@ -9727,13 +10709,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "active_task.total_day"
+                        "Role": "active_task.total_day_count"
                       },
                       "Subject": {
                         "Role": "active_task"
                       }
                     },
-                    "ID": "active_tasks_have_total_days",
+                    "ID": "active_tasks_have_total_day_counts",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -9744,9 +10726,9 @@
                       "Entity": "active_task"
                     }
                   },
-                  "active_task.total_day": {
+                  "active_task.total_day_count": {
                     "Target": {
-                      "Entity": "active_task.total_day"
+                      "Entity": "active_task.total_day_count"
                     }
                   }
                 },
@@ -11167,39 +12149,6 @@
                 },
                 "State": "Generated"
               },
-              "task_has_current_days": {
-                "Binding": {
-                  "ConceptualEntity": "Task"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "task.current_days"
-                      },
-                      "Subject": {
-                        "Role": "task"
-                      }
-                    },
-                    "ID": "tasks_have_current_days",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "task": {
-                    "Target": {
-                      "Entity": "task"
-                    }
-                  },
-                  "task.current_days": {
-                    "Target": {
-                      "Entity": "task.current_days"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "task_has_event_level": {
                 "Binding": {
                   "ConceptualEntity": "Task"
@@ -11439,39 +12388,6 @@
                   "task.task_start_date": {
                     "Target": {
                       "Entity": "task.task_start_date"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "task_has_total_day": {
-                "Binding": {
-                  "ConceptualEntity": "Task"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "task.total_day"
-                      },
-                      "Subject": {
-                        "Role": "task"
-                      }
-                    },
-                    "ID": "tasks_have_total_days",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "task": {
-                    "Target": {
-                      "Entity": "task"
-                    }
-                  },
-                  "task.total_day": {
-                    "Target": {
-                      "Entity": "task.total_day"
                     }
                   }
                 },
@@ -14316,19 +15232,13 @@
             "lineageTag": "00e61a7c-d59d-486f-b3fb-03f46dedca85"
           },
           {
-            "name": "CurrentDayCount",
+            "name": "DayCount",
             "changedProperties": [
               {
                 "property": "IsHidden"
               }
             ],
-            "expression": [
-              "",
-              "var TaskStart = max('Support'[TaskStartDate])",
-              "var CurrentRangeEnd = max('Date'[CAL_DAY_DT])",
-              "var result = datediff(TaskStart, CurrentRangeEnd, DAY)",
-              "return result"
-            ],
+            "expression": "calculate(countrows(ActiveTask), USERELATIONSHIP('Date'[CAL_DAY_DT], ActiveTask[Date]))",
             "formatString": "0",
             "lineageTag": "f425a59a-8b3b-45a6-82f1-c9466eb04381"
           }
