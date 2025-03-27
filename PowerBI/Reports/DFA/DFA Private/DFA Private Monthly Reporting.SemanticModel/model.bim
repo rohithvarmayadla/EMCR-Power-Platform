@@ -77895,7 +77895,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimCaseDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimCaseDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimCaseDetail"
@@ -77918,7 +77918,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimStatus = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimStatus\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimStatus"
@@ -77941,7 +77941,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimEventDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimEventDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimEventDetail"
@@ -77964,7 +77964,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimType = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimType\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimType"
@@ -77987,7 +77987,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectClaimDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectClaimDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectClaimDetail"
@@ -78010,7 +78010,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimLocation = Source{[Schema=\"dfa_rpt\",Item=\"DimLocation\"]}[Data]",
           "in",
           "    dfa_rpt_DimLocation"
@@ -78033,7 +78033,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectDetail"
@@ -78051,12 +78051,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactCase = Source{[Schema=\"dfa_rpt\",Item=\"FactCase\"]}[Data]",
           "in",
           "    dfa_rpt_FactCase"
@@ -78079,7 +78079,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactClaim"
@@ -78097,12 +78097,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactEvent = Source{[Schema=\"dfa_rpt\",Item=\"FactEvent\"]}[Data]",
           "in",
           "    dfa_rpt_FactEvent"
@@ -78125,7 +78125,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProject = Source{[Schema=\"dfa_rpt\",Item=\"FactProject\"]}[Data]",
           "in",
           "    dfa_rpt_FactProject"
@@ -78148,7 +78148,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProjectClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactProjectClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactProjectClaim"
@@ -81540,6 +81540,19 @@
             "lineageTag": "8e1bfc1a-904b-4e2a-81f0-688b5ee6861e",
             "sourceColumn": "WereYouVacantDuringTheEvent",
             "summarizeBy": "none"
+          },
+          {
+            "name": "BPFStage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a060b5c7-9fc8-4e4d-aeed-f0c58cafade0",
+            "sourceColumn": "BPFStage",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "33595b0c-57a1-450e-985d-97900f7fad30",
@@ -83289,7 +83302,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -94242,7 +94255,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+                "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
                 "    dbo_D_DATE = Source{[Schema=\"dbo\",Item=\"D_DATE\"]}[Data],",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_D_DATE,{{\"CAL_DAY_DT\", type date}})",
                 "in",
@@ -96139,19 +96152,19 @@
           },
           {
             "name": "Applications Under Review",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [ApplicationCaseBPFStage] = \"Checking Criteria\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Checking Criteria\"))",
             "formatString": "0",
             "lineageTag": "1abc064b-214f-48c9-b96f-7eb7e53eb74b"
           },
           {
             "name": "Applications Assigned to Evaluator",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [ApplicationCaseBPFStage] = \"Assess Damage\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\"))",
             "formatString": "0",
             "lineageTag": "a7d668d0-2c59-4d03-8848-590318cce43a"
           },
           {
             "name": "Applications Waiting on Payment",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [ApplicationCaseBPFStage] = \"Review Report\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\"))",
             "formatString": "0",
             "lineageTag": "da9ac7e4-e441-439a-b890-14dc578fe42c"
           }

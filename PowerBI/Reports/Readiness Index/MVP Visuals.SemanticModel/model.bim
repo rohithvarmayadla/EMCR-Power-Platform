@@ -110119,7 +110119,7 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "expression": "calculate(sum('emcr_readinessindexsurvey (2)'[Value]), FILTER('emcr_readinessindexsurvey (2)', 'emcr_readinessindexsurvey (2)'[Attribute] = \"Level 1 Foundational\"))",
+            "expression": "calculate(sum('emcr_readinessindexsurvey (2)'[Value]), FILTER('emcr_readinessindexsurvey (2)', 'emcr_readinessindexsurvey (2)'[Attribute] = \"Level 3 Moderate Progress\"))",
             "lineageTag": "123d11f2-aca0-4d78-888c-fe8cf41730cb"
           },
           {
