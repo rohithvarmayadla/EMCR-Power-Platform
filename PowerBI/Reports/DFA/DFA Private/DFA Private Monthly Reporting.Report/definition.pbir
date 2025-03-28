@@ -3,7 +3,6 @@
   "datasetReference": {
     "byPath": {
       "path": "../DFA Private Monthly Reporting.SemanticModel"
-    },
-    "byConnection": null
+    }
   }
 }

@@ -97995,6 +97995,20 @@
         "fromTable": "emcr_readinessindexsurvey",
         "toColumn": "emcr_ministryname",
         "toTable": "Ministry"
+      },
+      {
+        "name": "3d1c149e-831c-7660-9254-28fd99852464",
+        "fromColumn": "Year",
+        "fromTable": "emcr_readinessindexsurvey",
+        "toColumn": "Name",
+        "toTable": "emcr_year"
+      },
+      {
+        "name": "cf759486-2215-a089-a35a-868d0c5b20b7",
+        "fromColumn": "emcr_yearname",
+        "fromTable": "emcr_readinessindexsurvey (2)",
+        "toColumn": "Name",
+        "toTable": "emcr_year"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -101912,6 +101926,165 @@
             "lineageTag": "78420835-159e-433d-87e5-23a03c93a378",
             "sourceColumn": "Total Score Prcnt",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_bcpfullscalerecovery",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5636e79a-892c-4387-9c95-44d6bccd2a5d",
+            "sourceColumn": "emcr_bcpfullscalerecovery",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "BCP Full Scale Recovery",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a371a84-4f3c-4425-9622-722fe16a5c60",
+            "sourceColumn": "emcr_bcpfullscalerecoveryname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_bctitdr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "feadb32e-895a-4b73-93eb-59a29b058d91",
+            "sourceColumn": "emcr_bctitdr",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "BCT ITDR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c18c5b30-3979-4954-acd5-2139ae54ef60",
+            "sourceColumn": "emcr_bctitdrname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_scmintegrated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "411c7dd7-9084-4abd-b7b6-099a7aaafc49",
+            "sourceColumn": "emcr_scmintegrated",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SCM Integrated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71e0feee-3b67-4ba7-a8cd-c01c2f477246",
+            "sourceColumn": "emcr_scmintegratedname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ScoreBCPFullScaleRecovery",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e73e0a9f-9087-4b40-8606-dec1586d5499",
+            "sourceColumn": "emcr_scorebcpfullscalerecovery",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ScoreBCTITDR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c8975b3a-d92e-49db-9fd2-de0f69814010",
+            "sourceColumn": "emcr_scorebctitdr",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ScoreSCMIntegrated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "cb587107-73c4-4b76-ac61-883adcc6441b",
+            "sourceColumn": "emcr_scorecsmintegrated",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_issurveycompleted",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5c2e8879-cd80-4a34-ab65-643318ad888c",
+            "sourceColumn": "emcr_issurveycompleted",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Is Survey Completed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87c405a2-e865-457b-b1ac-da992df0731b",
+            "sourceColumn": "emcr_issurveycompletedname",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "a57a7dbd-b3ea-4f7f-9d7d-56b65d2d8edc",
@@ -101925,9 +102098,10 @@
                 "    Source = CommonDataService.Database(\"emcrdev.crm3.dynamics.com\"),",
                 "    dbo_emcr_readinessindexsurvey = Source{[Schema=\"dbo\",Item=\"emcr_readinessindexsurvey\"]}[Data],",
                 "    #\"Added Custom\" = Table.AddColumn(dbo_emcr_readinessindexsurvey, \"Total Score Prcnt\", each [emcr_totalscorepercentage] * 100.00),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Total Score Prcnt\", type number}})",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Total Score Prcnt\", type number}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each ([emcr_ministry] <> null))",
                 "in",
-                "    #\"Changed Type\""
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
@@ -102291,6 +102465,13 @@
           }
         ],
         "lineageTag": "b4795ee6-cdde-447d-a7ff-3a2b739062bd",
+        "measures": [
+          {
+            "name": "UserName",
+            "expression": "USERNAME()",
+            "lineageTag": "b32f2625-0d20-4e17-91d2-cd26e70734e6"
+          }
+        ],
         "partitions": [
           {
             "name": "emcr_year",
@@ -110107,6 +110288,19 @@
             "lineageTag": "5e1c67e5-191a-47d7-975c-9d5e84e6aab5",
             "sourceColumn": "Value",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_yearname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8cc137ad-6fb3-4990-94e9-40b1d5e4129e",
+            "sourceColumn": "emcr_yearname",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "3b900dbd-d314-4f02-baa6-0e4e78420071",
@@ -110136,8 +110330,8 @@
               "expression": [
                 "let",
                 "    Source = emcr_readinessindexsurvey,",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\", \"emcr_name\", \"emcr_ministryname\"}),",
-                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"emcr_name\", \"emcr_ministryname\"}, \"Attribute\", \"Value\"),",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\"}),",
+                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\"}, \"Attribute\", \"Value\"),",
                 "    #\"Replaced Value\" = Table.ReplaceValue(#\"Unpivoted Columns\",\"emcr_level\",\"Level \",Replacer.ReplaceText,{\"Attribute\"}),",
                 "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"foundational\",\" Foundational\",Replacer.ReplaceText,{\"Attribute\"}),",
                 "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"initialprogress\",\" Initial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",

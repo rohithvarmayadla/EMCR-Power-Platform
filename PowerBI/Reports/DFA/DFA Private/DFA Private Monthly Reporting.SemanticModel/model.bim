@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.782.0 (24.11)"
+        "value": "2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a"
       },
       {
         "name": "PBI_ProTooling",
@@ -6792,16 +6792,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Community": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -52779,6 +52769,16 @@
                     }
                   },
                   {
+                    "Applications": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
                     "Applications Opened": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
@@ -81553,6 +81553,29 @@
             "lineageTag": "a060b5c7-9fc8-4e4d-aeed-f0c58cafade0",
             "sourceColumn": "BPFStage",
             "summarizeBy": "none"
+          },
+          {
+            "name": "AppCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "if(",
+              "   (DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\") || DimCaseDetail[BPFStage] = \"Close/Pay\", \"Completed\", IF(",
+              "    (DimCaseDetail[EligibilityStatus] = \"Ineligible\" || DimCaseDetail[EligibilityStatus] = \"Ineligible\") && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
+              "        DimCaseDetail[BPFStage] = \"Checking Criteria\", \"Under Review\", if(",
+              "            DimCaseDetail[BPFStage] = \"Assess Damage\", \"Assigned To Evaluator\", if(",
+              "                DimCaseDetail[BPFStage] = \"Review Report\", \"Payment Validations\", \"Unknown\"",
+              "    )))))"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "e24cc211-eaf3-4f09-b079-c3bc8b36a551",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "33595b0c-57a1-450e-985d-97900f7fad30",
@@ -96167,6 +96190,12 @@
             "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\"))",
             "formatString": "0",
             "lineageTag": "da9ac7e4-e441-439a-b890-14dc578fe42c"
+          },
+          {
+            "name": "Applications",
+            "expression": "countrows(FactCase)",
+            "formatString": "0",
+            "lineageTag": "0c93fa89-82b8-4d0b-a899-fdd870e8c071"
           }
         ],
         "partitions": [
