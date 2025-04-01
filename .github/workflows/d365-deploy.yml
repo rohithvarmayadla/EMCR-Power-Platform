@@ -1,34 +1,75 @@
-name: Deploy D365 Solution
+name: Deploy-D365-Solution
 
 on:
   workflow_dispatch:
     inputs:
       solution-name:
-        description: "Solution Name"
+        description: 'Name of the solution'
         required: true
-        type: string
 
 jobs:
   build:
-    name: Build D365 Solution
-    runs-on: windows-latest
+    runs-on: windows-latest  # Use Windows runner
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Pack Solution from Unpacked Files
-        run: |
-          # Set variables
-          SOLUTION_NAME=${{ inputs.solution-name }}
-          SOLUTION_DIR=./PowerPlatform/Solutions/${SOLUTION_NAME}/Unmanaged
-          OUTPUT_FILE=./artifacts/${SOLUTION_NAME}.zip
+    - name: Install Power Platform CLI
+      uses: microsoft/powerplatform-actions/actions-install@v1
 
-          # Pack solution using pac command (assuming the unpacked files are in the solution directory)
-          pac solution pack --path $SOLUTION_DIR --zipfile $OUTPUT_FILE --managed false
+    - name: Pack Power Platform Solution
+      uses: microsoft/powerplatform-actions/pack-solution@v1
+      with:
+        solution-folder: PowerPlatform/Solutions/${{ inputs.solution-name }}/Managed
+        solution-file: artifacts/${{ inputs.solution-name }}.zip
+        solution-type: Managed
 
-      - name: Upload Solution Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: d365-solution
-          path: ./artifacts/${{ inputs.solution-name }}.zip
+    - name: Upload Solution Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ inputs.solution-name }}
+        path: ./artifacts/${{ inputs.solution-name }}.zip
+
+
+  deploy:
+    name: Deploy - EMCR-UAT
+    runs-on: windows-latest
+    needs: build
+    environment: 
+      name: EMCR-UAT 
+      url: ${{ vars.PP_ENV_URL }}
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Download Solution Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.solution-name }}
+        path: ./artifacts
+
+    - name: Install Power Platform CLI
+      uses: microsoft/powerplatform-actions/actions-install@v1
+
+    # - name: Authenticate with Power Platform
+    #   uses: microsoft/powerplatform-actions/authenticate@v1
+    #   with:
+    #     environment-url: ${{ vars.PP_ENV_URL }}
+    #     client-id: ${{ vars.PP_APP_ID }}
+    #     tenant-id: ${{ vars.PP_TENANT_ID }}
+    #     client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+
+    - name: Deploy Solution
+      uses: microsoft/powerplatform-actions/import-solution@v1
+      with:
+        environment-url: ${{ vars.PP_ENV_URL }}
+        app-id: ${{ vars.PP_APP_ID }}
+        tenant-id: ${{ vars.PP_TENANT_ID }}
+        client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+        solution-file: ./artifacts/${{ inputs.solution-name }}.zip
+        use-deployment-settings-file: true
+        deployment-settings-file: PowerPlatform/Solutions/${{ inputs.solution-name }}/uat.deploymentsettings.json
+        async: true
+        max-async-wait: 60
+        skip-lower-version: true
