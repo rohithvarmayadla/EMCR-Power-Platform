@@ -1,0 +1,920 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"emcr_readinessindexsurvey\",\"emcr_year\",\"emcr_readinessindexsurvey (2)\",\"Ministry\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_b8a8465f-0aa4-413c-9fa5-8f8d6c53a905",
+        "fromColumn": "emcr_ministryname",
+        "fromTable": "emcr_readinessindexsurvey (2)",
+        "toColumn": "emcr_ministryname",
+        "toTable": "Ministry"
+      },
+      {
+        "name": "AutoDetected_3e10fd38-3cde-41c7-b190-0153e61d65c6",
+        "fromColumn": "emcr_yearname",
+        "fromTable": "emcr_readinessindexsurvey (2)",
+        "toColumn": "emcr_yearname",
+        "toTable": "emcr_year"
+      },
+      {
+        "name": "dfcbbb79-2ad6-af8a-855e-4effd3e23254",
+        "fromColumn": "Ministry",
+        "fromTable": "emcr_readinessindexsurvey",
+        "toColumn": "emcr_ministryname",
+        "toTable": "Ministry"
+      },
+      {
+        "name": "c13c5e0a-7c80-479e-9a99-5cc49ba67ba6",
+        "fromColumn": "Year",
+        "fromTable": "emcr_readinessindexsurvey",
+        "toColumn": "emcr_yearname",
+        "toTable": "emcr_year"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "emcr_readinessindexsurvey",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c1e1c8da-910b-494c-916c-e7fd1c487a29",
+            "sourceColumn": "emcr_name",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "80aa5fdc-c6ca-4455-af51-06012361bf2e",
+            "sourceColumn": "emcr_ministry",
+            "sourceProviderType": "nchar",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ministry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae9a2044-954c-47ca-a89d-b00735d41737",
+            "sourceColumn": "emcr_ministryname",
+            "sourceProviderType": "nvarchar(160)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "263106f0-c260-4695-a18b-85fbead7c180",
+            "sourceColumn": "emcr_yearname",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Level 1 - Foundational",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7be71271-db8c-450e-af0f-ece3e59b2f90",
+            "sourceColumn": "emcr_level1foundational",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Level 2 - Initial Progress",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4dfb9848-9be4-4a89-a185-14c9bff749a1",
+            "sourceColumn": "emcr_level2initialprogress",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Level 3 - Moderate Progress",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "86c115a1-4513-4c98-b6e8-2da1abbe4133",
+            "sourceColumn": "emcr_level3moderateprogress",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Level 4 - Substantial Progress",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "99d3de35-a233-4dce-ab81-50d4d957e25d",
+            "sourceColumn": "emcr_level4substantialprogress",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Level 5 - Objective Achieved",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fd711d5d-e031-462b-8383-be08c90e911c",
+            "sourceColumn": "emcr_level5objectiveachieved",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Leadership",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "914e25a1-07a5-4370-806a-91fbcf440878",
+            "sourceColumn": "emcr_totalscoreleadership",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCMP Awareness",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1fb458a-cf9c-45d2-bbbd-bb07113fd2b0",
+            "sourceColumn": "emcr_totalscorebcmpawareness",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total Score Leadership Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9ada8f78-77b0-4b8c-ac3b-4b1acbb1fdba",
+            "sourceColumn": "emcr_totalscoreleadershippercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCMP Awareness Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f048c1f3-e1e9-4f7e-aaa7-0f366fe94add",
+            "sourceColumn": "emcr_totalscorebcmpawarenesspercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Critical Services",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "274b02b5-5576-4a76-969c-cc9dbb2caa6d",
+            "sourceColumn": "emcr_totalscorecriticalservices",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "870084a3-3cb3-4403-8f7b-f9885ca69181",
+            "sourceColumn": "emcr_totalscorebcp",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Recovery Strategies",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "30dfc1de-fb82-4427-bd44-9298e6d7418f",
+            "sourceColumn": "emcr_totalscorerecoverystrategies",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9c8e2eb9-9ef9-49f1-b99b-2f3a9a348977",
+            "sourceColumn": "emcr_totalscorebct",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ec557083-f4f7-4ccc-a5e6-fad31fce239f",
+            "sourceColumn": "emcr_totalscorebce",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Crisis Mgmt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "55538216-5eee-41ce-8ba0-80b219668749",
+            "sourceColumn": "emcr_totalscorecrisismgmt",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score MOC Training",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d467fe6f-5675-458d-b122-2209a7ec2f82",
+            "sourceColumn": "emcr_totalscoremoctraining",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score MOC Exercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "16f92096-cd40-4562-9423-83e2e8af5b4a",
+            "sourceColumn": "emcr_totalscoremocexercises",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score SCM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8f577fc1-c079-4fb6-804b-442b5ee136e7",
+            "sourceColumn": "emcr_totalscorescm",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Approval",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1ef6501e-f9a5-4dd5-b748-4cbf2a4157ce",
+            "sourceColumn": "emcr_totalscoreapproval",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCP Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0a28ad25-d95c-4046-b17f-b818e7b9c75f",
+            "sourceColumn": "emcr_totalscorebcppercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Recovery Strategies Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7b171f60-f463-4c5f-af8f-880adbc37fd5",
+            "sourceColumn": "emcr_totalscorerecoverystrategiespercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Critical Services Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f5c618f7-e575-4d3d-931e-51b5c6386e76",
+            "sourceColumn": "emcr_totalscorecriticalservicespercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCT Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0c5264cc-aab5-401d-8012-40ebe629c8dc",
+            "sourceColumn": "emcr_totalscorebctpercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score BCE Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "69878c02-e468-465b-ae53-3b968b40fa03",
+            "sourceColumn": "emcr_totalscorebcepercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Crisis Mgmt Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5c2a0429-362b-43f8-aa1d-0348220b6a1d",
+            "sourceColumn": "emcr_totalscorecrisismgmtpercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score MOC Exercises Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "344f0510-f6d8-41a3-86a8-d17bc77cc4a9",
+            "sourceColumn": "emcr_totalscoremocexercisespercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score MOC Training Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0e3a5cf0-5861-49a9-ac5e-8b16338627ce",
+            "sourceColumn": "emcr_totalscoremoctrainingpercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "62fa537a-e029-4710-8341-52a8ebc5c87d",
+            "sourceColumn": "emcr_totalscorepercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Approval Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "cfcaf147-4188-42ab-8c4e-8bc4b847cae5",
+            "sourceColumn": "emcr_totalscoreapprovalpercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score SCM Percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "422cd286-fd96-4f3e-9496-c6afa7f20ae4",
+            "sourceColumn": "emcr_totalscorescmpercentage",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Prcnt",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2562a845-0c13-411f-81d3-600f5148b88d",
+            "sourceColumn": "Total Score Prcnt",
+            "sourceProviderType": "double",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "438c4234-47d1-4cab-ac3d-d54ac6b80457",
+        "partitions": [
+          {
+            "name": "emcr_readinessindexsurvey",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"emcrdev.crm3.dynamics.com\"),",
+                "    dbo_emcr_readinessindexsurvey = Source{[Schema=\"dbo\",Item=\"emcr_readinessindexsurvey\"]}[Data],",
+                "     #\"Removed Other Columns\" = Table.SelectColumns(dbo_emcr_readinessindexsurvey,{\"emcr_name\", \"emcr_ministry\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\", \"emcr_totalscoreleadership\", \"emcr_totalscorebcmpawareness\", \"emcr_totalscoreleadershippercentage\", \"emcr_totalscorebcmpawarenesspercentage\", \"emcr_totalscorecriticalservices\", \"emcr_totalscorebcp\", \"emcr_totalscorerecoverystrategies\", \"emcr_totalscorebct\", \"emcr_totalscorebce\", \"emcr_totalscorecrisismgmt\", \"emcr_totalscoremoctraining\", \"emcr_totalscoremocexercises\", \"emcr_totalscorescm\", \"emcr_totalscoreapproval\", \"emcr_totalscorebcppercentage\", \"emcr_totalscorerecoverystrategiespercentage\", \"emcr_totalscorecriticalservicespercentage\", \"emcr_totalscorebctpercentage\", \"emcr_totalscorebcepercentage\", \"emcr_totalscorecrisismgmtpercentage\", \"emcr_totalscoremocexercisespercentage\", \"emcr_totalscoremoctrainingpercentage\", \"emcr_totalscorepercentage\", \"emcr_totalscoreapprovalpercentage\", \"emcr_totalscorescmpercentage\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Other Columns\", \"Total Score Prcnt\", each [emcr_totalscorepercentage] * 100.00),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Total Score Prcnt\", type number}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each ([emcr_ministry] <> null))",
+                "in",
+                "    #\"Filtered Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "emcr_year",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "emcr_yearname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "43aa4d8f-e9ba-4beb-99e1-c5acfac2e850",
+            "sourceColumn": "emcr_yearname",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "14bb5cd9-c310-4321-a4ec-9b74438554e6",
+        "partitions": [
+          {
+            "name": "emcr_year",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"emcr_readinessindexsurvey\",",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_yearname\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "emcr_readinessindexsurvey (2)",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "emcr_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8f5fec25-5cdf-4ef6-b981-fbe28e93a733",
+            "sourceColumn": "emcr_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministryname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "870d6d04-ce19-4c92-8a05-776d04a16133",
+            "sourceColumn": "emcr_ministryname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_yearname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c2203ed-debb-45bf-ac36-69dc0e6818c6",
+            "sourceColumn": "emcr_yearname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attribute",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e6295c12-cc94-4006-94ae-8f83d8403c32",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e56e0bde-2c59-4983-bbc8-39cb1e6dd07f",
+            "sourceColumn": "Value",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "227c0cbe-6170-4fc8-b88f-20e433fccb48",
+        "partitions": [
+          {
+            "name": "emcr_readinessindexsurvey (2)",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"emcr_readinessindexsurvey\",",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\"}),",
+                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\"}, \"Attribute\", \"Value\"),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Unpivoted Columns\",\"emcr_level\",\"Level \",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"foundational\",\" Foundational\",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"initialprogress\",\" Initial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"moderateprogress\",\" Moderate Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"substantialprogress\",\" Substantial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"objectiveachieved\",\" Objective Achieved\",Replacer.ReplaceText,{\"Attribute\"})",
+                "in",
+                "    #\"Replaced Value5\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ministry",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "emcr_ministryname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8a7544b0-7d33-47be-bfeb-1a6c52a84721",
+            "sourceColumn": "emcr_ministryname",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "750135dc-4d73-4efc-80e4-01c5c4e58755",
+        "partitions": [
+          {
+            "name": "Ministry",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #\"emcr_readinessindexsurvey\",",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_ministryname\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

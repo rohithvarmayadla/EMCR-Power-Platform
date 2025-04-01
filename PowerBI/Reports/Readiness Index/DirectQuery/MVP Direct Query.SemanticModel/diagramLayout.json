@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 668,
+            "y": 0
+          },
+          "nodeIndex": "emcr_readinessindexsurvey",
+          "nodeLineageTag": "438c4234-47d1-4cab-ac3d-d54ac6b80457",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4,
+            "y": 395.5
+          },
+          "nodeIndex": "emcr_readinessindexsurvey (2)",
+          "nodeLineageTag": "227c0cbe-6170-4fc8-b88f-20e433fccb48",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 323,
+            "y": 354.5
+          },
+          "nodeIndex": "emcr_year",
+          "nodeLineageTag": "14bb5cd9-c310-4321-a4ec-9b74438554e6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 85.5
+          },
+          "nodeIndex": "Ministry",
+          "nodeLineageTag": "750135dc-4d73-4efc-80e4-01c5c4e58755",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

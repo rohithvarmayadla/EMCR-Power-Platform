@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.782.0 (24.11)"
+        "value": "2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a"
       },
       {
         "name": "PBI_QueryOrder",
@@ -14509,7 +14509,9 @@
                       "Weight": 0.452
                     }
                   },
-                  {},
+                  {
+                    "": {}
+                  },
                   {
                     "district": {
                       "Source": {
@@ -36290,7 +36292,9 @@
                       "Weight": 0.452
                     }
                   },
-                  {},
+                  {
+                    "": {}
+                  },
                   {
                     "district": {
                       "Source": {
@@ -61644,16 +61648,6 @@
                       "State": "Generated",
                       "Type": "Noun",
                       "Weight": 0.99
-                    }
-                  },
-                  {
-                    "Ministry": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]

@@ -81565,7 +81565,7 @@
             "dataType": "string",
             "expression": [
               "if(",
-              "   (DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\") || DimCaseDetail[BPFStage] = \"Close/Pay\", \"Completed\", IF(",
+              "   DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\", \"Completed\", IF(",
               "    (DimCaseDetail[EligibilityStatus] = \"Ineligible\" || DimCaseDetail[EligibilityStatus] = \"Ineligible\") && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
               "        DimCaseDetail[BPFStage] = \"Checking Criteria\", \"Under Review\", if(",
               "            DimCaseDetail[BPFStage] = \"Assess Damage\", \"Assigned To Evaluator\", if(",
