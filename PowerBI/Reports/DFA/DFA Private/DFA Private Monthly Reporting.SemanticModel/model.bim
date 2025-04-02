@@ -6646,16 +6646,6 @@
                     }
                   },
                   {
-                    "Community Application Status": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
-                  },
-                  {
                     "Application Status": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
@@ -19975,16 +19965,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Project Status": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -54949,6 +54929,111 @@
                   "Value": "Hidden"
                 }
               },
+              "monthlyreportmeasures.applications_assigned_to_evaluator_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Assigned to Evaluator NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Assigned to Evaluator": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_closed_eligible_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Closed Eligible NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Closed Eligible": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_closed_ineligible_withdrawn_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Closed Ineligible/Withdrawn NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Closed Ineligible/Withdrawn": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_under_review_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Under Review NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Under Review": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_waiting_on_payment_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Waiting on Payment NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Waiting on Payment Validations": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
               "monthlyreportmeasures.case_total_paid": {
                 "Definition": {
                   "Binding": {
@@ -54960,6 +55045,48 @@
                 "Terms": [
                   {
                     "Total Paid": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.case_total_paid_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Case Total Paid NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Paid": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.total_paid_closed_eligible_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Total Paid Closed Eligible NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Paid Closed Eligible": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -81565,12 +81692,13 @@
             "dataType": "string",
             "expression": [
               "if(",
-              "   DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\", \"Completed\", IF(",
-              "    (DimCaseDetail[EligibilityStatus] = \"Ineligible\" || DimCaseDetail[EligibilityStatus] = \"Ineligible\") && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
-              "        DimCaseDetail[BPFStage] = \"Checking Criteria\", \"Under Review\", if(",
-              "            DimCaseDetail[BPFStage] = \"Assess Damage\", \"Assigned To Evaluator\", if(",
-              "                DimCaseDetail[BPFStage] = \"Review Report\", \"Payment Validations\", \"Unknown\"",
-              "    )))))"
+              "   DimCaseDetail[CaseStatus] = \"Appeal\", \"Closed Appealed\",if(",
+              "   DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\", \"Closed Eligible\", IF(",
+              "    DimCaseDetail[EligibilityStatus] in {\"Ineligible\",\"Withdrawn\"} && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
+              "        DimCaseDetail[BPFStage] in {\"Checking Criteria\", \"Develop Files\"} && DimCaseDetail[CaseStatus] <> \"Closed\", \"Under Review\", if(",
+              "            DimCaseDetail[BPFStage] = \"Assess Damage\" && DimCaseDetail[CaseStatus] <> \"Closed\", \"Assigned To Evaluator\", if(",
+              "                DimCaseDetail[BPFStage] = \"Review Report\"&& DimCaseDetail[CaseStatus] <> \"Closed\", \"Payment Validations\", \"Unknown\"",
+              "    ))))))"
             ],
             "isDataTypeInferred": true,
             "lineageTag": "e24cc211-eaf3-4f09-b079-c3bc8b36a551",
@@ -96175,19 +96303,19 @@
           },
           {
             "name": "Applications Under Review",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Checking Criteria\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Checking Criteria\"&& not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
             "formatString": "0",
             "lineageTag": "1abc064b-214f-48c9-b96f-7eb7e53eb74b"
           },
           {
             "name": "Applications Assigned to Evaluator",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\"&& not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
             "formatString": "0",
             "lineageTag": "a7d668d0-2c59-4d03-8848-590318cce43a"
           },
           {
             "name": "Applications Waiting on Payment",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
             "formatString": "0",
             "lineageTag": "da9ac7e4-e441-439a-b890-14dc578fe42c"
           },
@@ -96196,6 +96324,58 @@
             "expression": "countrows(FactCase)",
             "formatString": "0",
             "lineageTag": "0c93fa89-82b8-4d0b-a899-fdd870e8c071"
+          },
+          {
+            "name": "Applications Assigned to Evaluator NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "0384de77-da32-408b-a08d-9a8c28de6140"
+          },
+          {
+            "name": "Applications Closed Eligible NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "def76875-3ce4-4467-8b6b-85df9df693c8"
+          },
+          {
+            "name": "Applications Closed Ineligible NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "18ac07fd-7c1c-406a-91b2-8478b1a02b89"
+          },
+          {
+            "name": "Applications Closed Withdrawn NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "3165542d-dc78-474b-a715-36741968e8a9"
+          },
+          {
+            "name": "Applications Closed Ineligible/Withdrawn NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] in {\"Ineligible\", \"Withdrawn\"}), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "347c5581-5f15-48e8-bb97-f0fd40fb8af5"
+          },
+          {
+            "name": "Applications Under Review NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [BPFStage] in {\"Checking Criteria\", \"Develop Files\"} && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "9072a9cb-e7ee-4e85-94e7-cf6c99f6f9dc"
+          },
+          {
+            "name": "Applications Waiting on Payment NODATE",
+            "expression": "calculate(countrows('FactCase'), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "70365194-56c5-4d2d-99e9-0780d91d4f3a"
+          },
+          {
+            "name": "Case Total Paid NODATE",
+            "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid])), \"Currency\")",
+            "lineageTag": "875d4a8f-eca2-43aa-b5f1-945dd745f196"
+          },
+          {
+            "name": "Total Paid Closed Eligible NODATE",
+            "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid]),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\")), \"Currency\")",
+            "lineageTag": "c3a0a534-6ebc-462b-b6b3-a1d4b5ef392a"
           }
         ],
         "partitions": [
