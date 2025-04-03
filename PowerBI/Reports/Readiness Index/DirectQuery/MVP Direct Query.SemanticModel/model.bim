@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"emcr_readinessindexsurvey\",\"emcr_year\",\"emcr_readinessindexsurvey (2)\",\"Ministry\"]"
+        "value": "[\"src_emcr_readinessindexsurvey\",\"trans_Year\",\"trans_Scores\",\"trans_Answers\",\"trans_Ministry\",\"trans_MaturityLevel\",\"Ministry\",\"Year\",\"Answers\",\"Score\",\"MaturityLevel\",\"Facts\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -25,8 +25,178 @@
         "name": "en-US",
         "linguisticMetadata": {
           "content": {
+            "Entities": {
+              "answers.emcr_areteammembersawarename": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_areteammembersawarename"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Are Business Continuity team members aware of their roles?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_awarenesscomments": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_awarenesscomments"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Awareness Comments": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_hasexecutivesponsorname": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_hasexecutivesponsorname"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Does the BCM program have an executive sponsor?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_hassteeringcommitteename": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_hassteeringcommitteename"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Does the ministry BCM program have a steering committee?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_isministryexecutiveawarename": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_isministryexecutiveawarename"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Are ministry executive aware of the BCM Program?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_isplanimplementedname": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_isplanimplementedname"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Has the ministry implemented a Business Continuity Management Program policy or strategic plan?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_leadershipcomments": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "emcr_leadershipcomments"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Leadership Comments": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "answers.emcr_trainingreceivedname": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Answers",
+                    "ConceptualProperty": "Has the Ministry Business Continuity Advisor received training from a Business Continuity Management Program certification body?"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Has the Ministry Business Continuity Advisor received training from a Business Continuity Management Program certification body?": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
             "Language": "en-US",
-            "Version": "1.0.0"
+            "Version": "2.0.0"
           },
           "contentType": "json"
         }
@@ -37,53 +207,252 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "trans_Answers",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_emcr_readinessindexsurvey,",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_businesscontinuitytrainingcomments\", \"emcr_hassitetempproceduresdescription\", \"emcr_dortosmatchdescription\", \"emcr_itdrplansforcriticalsystemsdescription\", \"emcr_altsitesindependentconnectivitydescription\", \"emcr_altsiteshavegeneratordescription\", \"emcr_businesscontinuityexercisesname\", \"emcr_yearname\", \"emcr_moctrainingcomments\", \"emcr_supplychainmanagementcomments\", \"emcr_mocexercisescomments\", \"emcr_businesscontinuityexercisescomments\", \"emcr_crisismanagementcomments\", \"emcr_recoverystrategiescomments\", \"emcr_bcpcomments\", \"emcr_criticalservicescomments\", \"emcr_awarenesscomments\", \"emcr_leadershipcomments\", \"emcr_isescalatedname\", \"emcr_mocaltsiteconnectivityname\", \"emcr_ministryexecapprovalname\", \"emcr_criticalvendorannualplanparticipationname\", \"emcr_haslossstrategyname\", \"emcr_criticaldependenciesprioritizedname\", \"emcr_criticaldependenciesidentifiedname\", \"emcr_mocfullscaleparticipationname\", \"emcr_havemocexercisesoccurredname\", \"emcr_moctabletopconductedname\", \"emcr_moccommunicationsdrillname\", \"emcr_mocstafforientationname\", \"emcr_ismocleadershiptrainedname\", \"emcr_ismocstafftrainedname\", \"emcr_mocactivationtrainingname\", \"emcr_isics100offeredname\", \"emcr_mocoverviewavailablename\", \"emcr_mocstaffingplanname\", \"emcr_moccrisiscommunicationplanname\", \"emcr_mocaltsitegeneratorname\", \"emcr_mocaltsiteprocedurename\", \"emcr_ismocalternateidentifiedname\", \"emcr_ismocannuallyreviewedname\", \"emcr_numberoffunctionalexercises\", \"emcr_numberoffullscaleexercises\", \"emcr_numberoftabletopexercises\", \"emcr_numberofdrills\", \"emcr_numberoforientations\", \"emcr_numberofbcps\", \"emcr_exercisetrainingname\", \"emcr_recoveryproceduretrainingname\", \"emcr_strategyselectiontrainingname\", \"emcr_ownersbiatrainingname\", \"emcr_dortosmatchname\", \"emcr_itdrplansforcriticalsystemsname\", \"emcr_isrecoveryalternateidentifiedname\", \"emcr_arerecordsbackedupname\", \"emcr_altsiteshavegeneratorname\", \"emcr_altsitesindependentconnectivityname\", \"emcr_communicationmethods\", \"emcr_lostdatainstructionsname\", \"emcr_containsmanualproceduresname\", \"emcr_hassitetempproceduresname\", \"emcr_hasnotificationandactivationproceduresname\", \"emcr_recoveryservicesannuallyreviewedname\", \"emcr_criticalservicesannuallyreviewedname\", \"emcr_ministrylistuptodatename\", \"emcr_annualawarenesscampaignname\", \"emcr_areteammembersawarename\", \"emcr_isministryexecutiveawarename\", \"emcr_establishedprogramstructurename\", \"emcr_trainingreceivedname\", \"emcr_hassteeringcommitteename\", \"emcr_isplanimplementedname\", \"emcr_hasexecutivesponsorname\", \"emcr_isbusinesscontinuitydiscussedname\", \"emcr_ministrybusinesscontinuityadvisorname\", \"emcr_ministryname\", \"emcr_ministry\", \"emcr_name\"}),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Other Columns\",{{\"emcr_yearname\", \"Year\"}, {\"emcr_name\", \"EMCRName\"}, {\"emcr_ministry\", \"MinistryID\"}, {\"emcr_ministryname\", \"MinistryName\"}})",
+          "in",
+          "    #\"Renamed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "a3c10fc1-476e-4628-86dc-09a0ad516171",
+        "queryGroup": "Transform"
+      },
+      {
+        "name": "src_emcr_readinessindexsurvey",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = CommonDataService.Database(\"emcrdev.crm3.dynamics.com\"),",
+          "    dbo_emcr_readinessindexsurvey = Source{[Schema=\"dbo\",Item=\"emcr_readinessindexsurvey\"]}[Data],",
+          "     #\"Removed Other Columns\" = Table.SelectColumns(dbo_emcr_readinessindexsurvey,{\"emcr_name\", \"emcr_ministry\", \"emcr_ministryname\", \"emcr_ministrybusinesscontinuityadvisorname\", \"emcr_isbusinesscontinuitydiscussedname\", \"emcr_hasexecutivesponsorname\", \"emcr_isplanimplementedname\", \"emcr_hassteeringcommitteename\", \"emcr_trainingreceivedname\", \"emcr_establishedprogramstructurename\", \"emcr_isministryexecutiveawarename\", \"emcr_areteammembersawarename\", \"emcr_annualawarenesscampaignname\", \"emcr_ministrylistuptodatename\", \"emcr_criticalservicesannuallyreviewedname\", \"emcr_recoveryservicesannuallyreviewedname\", \"emcr_hasnotificationandactivationproceduresname\", \"emcr_hassitetempproceduresname\", \"emcr_containsmanualproceduresname\", \"emcr_lostdatainstructionsname\", \"emcr_communicationmethods\", \"emcr_altsitesindependentconnectivityname\", \"emcr_altsiteshavegeneratorname\", \"emcr_arerecordsbackedupname\", \"emcr_isrecoveryalternateidentifiedname\", \"emcr_itdrplansforcriticalsystemsname\", \"emcr_dortosmatchname\", \"emcr_ownersbiatrainingname\", \"emcr_strategyselectiontrainingname\", \"emcr_recoveryproceduretrainingname\", \"emcr_exercisetrainingname\", \"emcr_numberofbcps\", \"emcr_numberoforientations\", \"emcr_numberofdrills\", \"emcr_numberoftabletopexercises\", \"emcr_numberoffullscaleexercises\", \"emcr_numberoffunctionalexercises\", \"emcr_ismocannuallyreviewedname\", \"emcr_ismocalternateidentifiedname\", \"emcr_mocaltsiteprocedurename\", \"emcr_mocaltsitegeneratorname\", \"emcr_moccrisiscommunicationplanname\", \"emcr_mocstaffingplanname\", \"emcr_mocoverviewavailablename\", \"emcr_isics100offeredname\", \"emcr_mocactivationtrainingname\", \"emcr_ismocstafftrainedname\", \"emcr_ismocleadershiptrainedname\", \"emcr_mocstafforientationname\", \"emcr_moccommunicationsdrillname\", \"emcr_moctabletopconductedname\", \"emcr_havemocexercisesoccurredname\", \"emcr_mocfullscaleparticipationname\", \"emcr_criticaldependenciesidentifiedname\", \"emcr_criticaldependenciesprioritizedname\", \"emcr_haslossstrategyname\", \"emcr_criticalvendorannualplanparticipationname\", \"emcr_ministryexecapprovalname\", \"emcr_mocaltsiteconnectivityname\", \"emcr_isescalatedname\", \"emcr_leadershipcomments\", \"emcr_awarenesscomments\", \"emcr_criticalservicescomments\", \"emcr_bcpcomments\", \"emcr_recoverystrategiescomments\", \"emcr_crisismanagementcomments\", \"emcr_businesscontinuityexercisescomments\", \"emcr_mocexercisescomments\", \"emcr_supplychainmanagementcomments\", \"emcr_moctrainingcomments\", \"emcr_yearname\", \"emcr_businesscontinuityexercisesname\", \"emcr_altsiteshavegeneratordescription\", \"emcr_altsitesindependentconnectivitydescription\", \"emcr_itdrplansforcriticalsystemsdescription\", \"emcr_dortosmatchdescription\", \"emcr_hassitetempproceduresdescription\", \"emcr_businesscontinuitytrainingcomments\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\", \"emcr_totalscoreleadershippercentage\", \"emcr_totalscorebcmpawarenesspercentage\", \"emcr_totalscorebcppercentage\", \"emcr_totalscorerecoverystrategiespercentage\", \"emcr_totalscorecriticalservicespercentage\", \"emcr_totalscorebctpercentage\", \"emcr_totalscorebcepercentage\", \"emcr_totalscorecrisismgmtpercentage\", \"emcr_totalscoremocexercisespercentage\", \"emcr_totalscoremoctrainingpercentage\", \"emcr_totalscorepercentage\", \"emcr_totalscoreapprovalpercentage\", \"emcr_totalscorescmpercentage\"}),",
+          "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Other Columns\", each ([emcr_ministry] <> null))",
+          "in",
+          "    #\"Filtered Rows\""
+        ],
+        "kind": "m",
+        "lineageTag": "93f80065-f362-47cd-9a6e-128706d5ef19",
+        "queryGroup": "Source"
+      },
+      {
+        "name": "trans_Year",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_emcr_readinessindexsurvey,",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_yearname\"}),",
+          "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\"),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Duplicates\",{{\"emcr_yearname\", \"Year\"}})",
+          "in",
+          "    #\"Renamed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "0bc5bd7d-0f8f-4c9f-abd6-6703230b8945",
+        "queryGroup": "Transform"
+      },
+      {
+        "name": "trans_Scores",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_emcr_readinessindexsurvey,",
+          "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"emcr_name\", \"EMCRName\"}, {\"emcr_ministry\", \"MinistryID\"}, {\"emcr_ministryname\", \"MinistryName\"}, {\"emcr_yearname\", \"Year\"}, {\"emcr_level1foundational\", \"Level 1 Foundational\"}, {\"emcr_level2initialprogress\", \"Level 2 Initial Progress\"}, {\"emcr_level3moderateprogress\", \"Level 3 Moderate Progress\"}, {\"emcr_level4substantialprogress\", \"Level 4 Substantial Progress\"}, {\"emcr_level5objectiveachieved\", \"Level 5 Objective Achieved\"}, {\"emcr_totalscoreleadershippercentage\", \"Total Score Leadership\"}, {\"emcr_totalscorebcmpawarenesspercentage\", \"Total Score BCMP Awareness\"}, {\"emcr_totalscorebcppercentage\", \"Total Score BCP\"}, {\"emcr_totalscorerecoverystrategiespercentage\", \"Total Score Recovery Strategies\"}, {\"emcr_totalscorecriticalservicespercentage\", \"Total Score Critical Services\"}, {\"emcr_totalscorebctpercentage\", \"Total Score BCT\"}, {\"emcr_totalscorebcepercentage\", \"Total Score BCE\"}, {\"emcr_totalscorecrisismgmtpercentage\", \"Total Score Crisis Management\"}, {\"emcr_totalscoremocexercisespercentage\", \"Total Score MOS Exercises\"}, {\"emcr_totalscoremoctrainingpercentage\", \"Total Score MOC Training\"}, {\"emcr_totalscorepercentage\", \"Total Score\"}, {\"emcr_totalscoreapprovalpercentage\", \"Total Score Approval\"}, {\"emcr_totalscorescmpercentage\", \"Total Score CM\"}}),",
+          "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Level 1 Foundational\", \"Level 2 Initial Progress\", \"Level 3 Moderate Progress\", \"Level 4 Substantial Progress\", \"Level 5 Objective Achieved\"})",
+          "in",
+          "    #\"Removed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "c80c9cf6-2dc5-40d0-b4b1-6c2b9197965d",
+        "queryGroup": "Transform"
+      },
+      {
+        "name": "trans_Ministry",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_emcr_readinessindexsurvey,",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_ministryname\"}),",
+          "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\"),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Duplicates\",{{\"emcr_ministryname\", \"MinistryName\"}})",
+          "in",
+          "    #\"Renamed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "faf5ca3b-6df0-4084-b697-d3430a5d02fd",
+        "queryGroup": "Transform"
+      },
+      {
+        "name": "trans_MaturityLevel",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = src_emcr_readinessindexsurvey,",
+          "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\"}),",
+          "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\"}, \"Attribute\", \"Value\"),",
+          "    #\"Replaced Value\" = Table.ReplaceValue(#\"Unpivoted Columns\",\"emcr_level\",\"Level \",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"foundational\",\" Foundational\",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"initialprogress\",\" Initial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"moderateprogress\",\" Moderate Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"substantialprogress\",\" Substantial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"objectiveachieved\",\" Objective Achieved\",Replacer.ReplaceText,{\"Attribute\"}),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Replaced Value5\",{{\"emcr_name\", \"EMCRName\"}, {\"emcr_ministryname\", \"Ministry\"}, {\"emcr_yearname\", \"Year\"}, {\"Attribute\", \"Maturity Level\"}, {\"Value\", \"Percent Score\"}})",
+          "in",
+          "    #\"Renamed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "62567fe5-299d-45ed-abd0-142e49b83c5e",
+        "queryGroup": "Transform"
+      }
+    ],
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ],
+        "folder": "Source"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "folder": "Transform"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "2"
+          }
+        ],
+        "folder": "Presentation"
+      }
+    ],
     "relationships": [
       {
-        "name": "AutoDetected_b8a8465f-0aa4-413c-9fa5-8f8d6c53a905",
-        "fromColumn": "emcr_ministryname",
-        "fromTable": "emcr_readinessindexsurvey (2)",
-        "toColumn": "emcr_ministryname",
-        "toTable": "Ministry"
-      },
-      {
-        "name": "AutoDetected_3e10fd38-3cde-41c7-b190-0153e61d65c6",
-        "fromColumn": "emcr_yearname",
-        "fromTable": "emcr_readinessindexsurvey (2)",
-        "toColumn": "emcr_yearname",
-        "toTable": "emcr_year"
-      },
-      {
-        "name": "dfcbbb79-2ad6-af8a-855e-4effd3e23254",
-        "fromColumn": "Ministry",
-        "fromTable": "emcr_readinessindexsurvey",
-        "toColumn": "emcr_ministryname",
-        "toTable": "Ministry"
-      },
-      {
-        "name": "c13c5e0a-7c80-479e-9a99-5cc49ba67ba6",
+        "name": "ea3b43f7-fd72-1ff0-d5c7-b9d92908a1e9",
         "fromColumn": "Year",
-        "fromTable": "emcr_readinessindexsurvey",
-        "toColumn": "emcr_yearname",
-        "toTable": "emcr_year"
+        "fromTable": "Score",
+        "toColumn": "Year",
+        "toTable": "Year"
+      },
+      {
+        "name": "6b9b7d6c-3686-f52d-19b4-dbe73f0291c2",
+        "fromColumn": "Year",
+        "fromTable": "MaturityLevel",
+        "toColumn": "Year",
+        "toTable": "Year"
+      },
+      {
+        "name": "f83ff86d-7d9f-cd87-1b2d-f9c56dac2180",
+        "fromColumn": "MinistryName",
+        "fromTable": "Score",
+        "toColumn": "MinistryName",
+        "toTable": "Ministry"
+      },
+      {
+        "name": "3badf463-415f-053f-d62b-b602af8ef629",
+        "fromColumn": "Ministry",
+        "fromTable": "MaturityLevel",
+        "toColumn": "MinistryName",
+        "toTable": "Ministry"
+      },
+      {
+        "name": "06102200-0c14-aa06-7132-3e7e3d07eb69",
+        "fromColumn": "MinistryName",
+        "fromTable": "Answers",
+        "toColumn": "MinistryName",
+        "toTable": "Ministry"
+      },
+      {
+        "name": "73da6d9f-1fd3-6b09-be95-e5eceb127ee3",
+        "fromColumn": "Year",
+        "fromTable": "Answers",
+        "toColumn": "Year",
+        "toTable": "Year"
       }
     ],
     "sourceQueryCulture": "en-US",
     "tables": [
       {
-        "name": "emcr_readinessindexsurvey",
+        "name": "Ministry",
         "annotations": [
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          },
           {
             "name": "PBI_NavigationStepName",
             "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
           }
         ],
         "columns": [
           {
-            "name": "Name",
+            "name": "MinistryName",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -91,13 +460,103 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "c1e1c8da-910b-494c-916c-e7fd1c487a29",
-            "sourceColumn": "emcr_name",
+            "lineageTag": "6a67737a-e3c9-4d9d-8e99-3b771aed244e",
+            "sourceColumn": "MinistryName",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "70907f1a-15fd-4c48-b8fe-43c59f9a794a",
+        "partitions": [
+          {
+            "name": "Ministry",
+            "mode": "import",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_Ministry",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Year",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea691150-ba41-4384-a8e2-66d2b7f6de33",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bd3f5918-c2fc-4178-9c06-e33ed4ea78ba",
+        "partitions": [
+          {
+            "name": "Year",
+            "mode": "import",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_Year",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Score",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EMCRName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "364f0d86-76c9-464a-99f2-9bbcf7045103",
+            "sourceColumn": "EMCRName",
             "sourceProviderType": "nvarchar(850)",
             "summarizeBy": "none"
           },
           {
-            "name": "emcr_ministry",
+            "name": "MinistryID",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -105,13 +564,13 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "80aa5fdc-c6ca-4455-af51-06012361bf2e",
-            "sourceColumn": "emcr_ministry",
+            "lineageTag": "95d7d5ce-f3dd-4766-994d-8c9e87e9c472",
+            "sourceColumn": "MinistryID",
             "sourceProviderType": "nchar",
             "summarizeBy": "none"
           },
           {
-            "name": "Ministry",
+            "name": "MinistryName",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -119,8 +578,8 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "ae9a2044-954c-47ca-a89d-b00735d41737",
-            "sourceColumn": "emcr_ministryname",
+            "lineageTag": "62aa23e1-76dc-4b23-b9d8-3b4f87e3f310",
+            "sourceColumn": "MinistryName",
             "sourceProviderType": "nvarchar(160)",
             "summarizeBy": "none"
           },
@@ -133,100 +592,10 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "263106f0-c260-4695-a18b-85fbead7c180",
-            "sourceColumn": "emcr_yearname",
+            "lineageTag": "741710f4-ca5a-4831-9f3d-9c0cd473133e",
+            "sourceColumn": "Year",
             "sourceProviderType": "nvarchar(850)",
             "summarizeBy": "none"
-          },
-          {
-            "name": "Level 1 - Foundational",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "7be71271-db8c-450e-af0f-ece3e59b2f90",
-            "sourceColumn": "emcr_level1foundational",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Level 2 - Initial Progress",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "4dfb9848-9be4-4a89-a185-14c9bff749a1",
-            "sourceColumn": "emcr_level2initialprogress",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Level 3 - Moderate Progress",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "86c115a1-4513-4c98-b6e8-2da1abbe4133",
-            "sourceColumn": "emcr_level3moderateprogress",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Level 4 - Substantial Progress",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "99d3de35-a233-4dce-ab81-50d4d957e25d",
-            "sourceColumn": "emcr_level4substantialprogress",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Level 5 - Objective Achieved",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "fd711d5d-e031-462b-8383-be08c90e911c",
-            "sourceColumn": "emcr_level5objectiveachieved",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
           },
           {
             "name": "Total Score Leadership",
@@ -241,8 +610,8 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "914e25a1-07a5-4370-806a-91fbcf440878",
-            "sourceColumn": "emcr_totalscoreleadership",
+            "lineageTag": "e56cd3d9-666c-4dc9-bb17-dd130e86adf1",
+            "sourceColumn": "Total Score Leadership",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -252,20 +621,6 @@
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "e1fb458a-cf9c-45d2-bbbd-bb07113fd2b0",
-            "sourceColumn": "emcr_totalscorebcmpawareness",
-            "sourceProviderType": "nvarchar(100)",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Total Score Leadership Percentage",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
               },
               {
                 "name": "PBI_FormatHint",
@@ -273,44 +628,8 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "9ada8f78-77b0-4b8c-ac3b-4b1acbb1fdba",
-            "sourceColumn": "emcr_totalscoreleadershippercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Total Score BCMP Awareness Percentage",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "f048c1f3-e1e9-4f7e-aaa7-0f366fe94add",
-            "sourceColumn": "emcr_totalscorebcmpawarenesspercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Total Score Critical Services",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "274b02b5-5576-4a76-969c-cc9dbb2caa6d",
-            "sourceColumn": "emcr_totalscorecriticalservices",
+            "lineageTag": "b5faabcb-e548-4c42-b23f-8d4f495f2581",
+            "sourceColumn": "Total Score BCMP Awareness",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -327,8 +646,8 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "870084a3-3cb3-4403-8f7b-f9885ca69181",
-            "sourceColumn": "emcr_totalscorebcp",
+            "lineageTag": "fbbeb3d4-20d9-42a4-9200-bb66c92b81fe",
+            "sourceColumn": "Total Score BCP",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -345,8 +664,26 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "30dfc1de-fb82-4427-bd44-9298e6d7418f",
-            "sourceColumn": "emcr_totalscorerecoverystrategies",
+            "lineageTag": "67aae0b4-9831-4650-85b7-c6c7b4032a27",
+            "sourceColumn": "Total Score Recovery Strategies",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score Critical Services",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6e903705-f430-4672-9112-ad3254bb2e72",
+            "sourceColumn": "Total Score Critical Services",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -363,8 +700,8 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "9c8e2eb9-9ef9-49f1-b99b-2f3a9a348977",
-            "sourceColumn": "emcr_totalscorebct",
+            "lineageTag": "bb4ee751-302e-40be-8094-71282bf19c1c",
+            "sourceColumn": "Total Score BCT",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -381,13 +718,13 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "ec557083-f4f7-4ccc-a5e6-fad31fce239f",
-            "sourceColumn": "emcr_totalscorebce",
+            "lineageTag": "8ad98a9e-6b1f-4483-88a8-13d2e8af08ea",
+            "sourceColumn": "Total Score BCE",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score Crisis Mgmt",
+            "name": "Total Score Crisis Management",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -399,8 +736,26 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "55538216-5eee-41ce-8ba0-80b219668749",
-            "sourceColumn": "emcr_totalscorecrisismgmt",
+            "lineageTag": "5261e96b-c75f-44f6-b72a-d18ea54c06e2",
+            "sourceColumn": "Total Score Crisis Management",
+            "sourceProviderType": "decimal(38, 0)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Score MOS Exercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "78a29a07-43ac-4beb-a9d8-4ae2e45ec650",
+            "sourceColumn": "Total Score MOS Exercises",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -417,13 +772,13 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "d467fe6f-5675-458d-b122-2209a7ec2f82",
-            "sourceColumn": "emcr_totalscoremoctraining",
+            "lineageTag": "dab98e7e-905c-40bd-8559-3fcb0cf9f549",
+            "sourceColumn": "Total Score MOC Training",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score MOC Exercises",
+            "name": "Total Score",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -435,26 +790,8 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "16f92096-cd40-4562-9423-83e2e8af5b4a",
-            "sourceColumn": "emcr_totalscoremocexercises",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Total Score SCM",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "8f577fc1-c079-4fb6-804b-442b5ee136e7",
-            "sourceColumn": "emcr_totalscorescm",
+            "lineageTag": "176c9592-114b-4109-b127-476fb06bc982",
+            "sourceColumn": "Total Score",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
@@ -471,13 +808,13 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "1ef6501e-f9a5-4dd5-b748-4cbf2a4157ce",
-            "sourceColumn": "emcr_totalscoreapproval",
+            "lineageTag": "e5947727-c6fc-4f8a-b1ab-5228c221150c",
+            "sourceColumn": "Total Score Approval",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score BCP Percentage",
+            "name": "Total Score CM",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -489,226 +826,1065 @@
               }
             ],
             "dataType": "double",
-            "lineageTag": "0a28ad25-d95c-4046-b17f-b818e7b9c75f",
-            "sourceColumn": "emcr_totalscorebcppercentage",
+            "lineageTag": "cef8a230-79be-48e8-a0b9-3d29802f15e7",
+            "sourceColumn": "Total Score CM",
             "sourceProviderType": "decimal(38, 0)",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score Recovery Strategies Percentage",
+            "name": "emcr_ministrybusinesscontinuityadvisorname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "7b171f60-f463-4c5f-af8f-880adbc37fd5",
-            "sourceColumn": "emcr_totalscorerecoverystrategiespercentage",
-            "sourceProviderType": "decimal(38, 0)",
+            "dataType": "string",
+            "lineageTag": "455795d5-983f-4688-b336-15e71f0b9aff",
+            "sourceColumn": "emcr_ministrybusinesscontinuityadvisorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isbusinesscontinuitydiscussedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6430f5e7-6b3b-4a4b-ae12-2f916dbac6e2",
+            "sourceColumn": "emcr_isbusinesscontinuitydiscussedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hasexecutivesponsorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "42b184d9-fcf4-4f1b-947c-99539bb4e824",
+            "sourceColumn": "emcr_hasexecutivesponsorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isplanimplementedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "74845338-15c7-4093-a2f0-88596688eb51",
+            "sourceColumn": "emcr_isplanimplementedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassteeringcommitteename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8fb3e705-bbe4-4914-8144-25b41d69dfdc",
+            "sourceColumn": "emcr_hassteeringcommitteename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_trainingreceivedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4780ef5a-cf57-416c-b13e-d9100bcbb98f",
+            "sourceColumn": "emcr_trainingreceivedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_establishedprogramstructurename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a1450fba-9bd7-417c-aeee-7105c950c915",
+            "sourceColumn": "emcr_establishedprogramstructurename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isministryexecutiveawarename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24613c3b-2236-415e-a36b-ca15476bd11e",
+            "sourceColumn": "emcr_isministryexecutiveawarename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_areteammembersawarename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4db88b0e-2e1f-4568-a8b2-ebf866161420",
+            "sourceColumn": "emcr_areteammembersawarename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_annualawarenesscampaignname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5aa2efe9-3faf-4f60-b805-5911ff658b96",
+            "sourceColumn": "emcr_annualawarenesscampaignname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministrylistuptodatename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b65498da-c08c-45f7-9564-ff491da462a0",
+            "sourceColumn": "emcr_ministrylistuptodatename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalservicesannuallyreviewedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea1a4535-a788-414e-ada0-b2cd42abadaf",
+            "sourceColumn": "emcr_criticalservicesannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoveryservicesannuallyreviewedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87083701-73f2-40ca-afe7-bbe2b0ae815b",
+            "sourceColumn": "emcr_recoveryservicesannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hasnotificationandactivationproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "795857f1-a8c7-4ff4-8c8d-12fdc5d90413",
+            "sourceColumn": "emcr_hasnotificationandactivationproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassitetempproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8bf97379-8a2a-4c65-83a1-4f3e5277e09b",
+            "sourceColumn": "emcr_hassitetempproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_containsmanualproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c8b1456-e4fd-4c8c-8ee3-08c522d0874d",
+            "sourceColumn": "emcr_containsmanualproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_lostdatainstructionsname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0bfdcfc6-3cd6-40bb-a676-546d8212e267",
+            "sourceColumn": "emcr_lostdatainstructionsname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_communicationmethods",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "947c1c0b-8ced-4ca8-9972-5f8419c65f2c",
+            "sourceColumn": "emcr_communicationmethods",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsitesindependentconnectivityname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "411b0d18-98b0-48d9-81ee-e793d66f1794",
+            "sourceColumn": "emcr_altsitesindependentconnectivityname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsiteshavegeneratorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f17f2e18-e305-420a-acfd-a3c8b6e42962",
+            "sourceColumn": "emcr_altsiteshavegeneratorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_arerecordsbackedupname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a14a3511-d135-40f5-96ae-da3613c63dd0",
+            "sourceColumn": "emcr_arerecordsbackedupname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isrecoveryalternateidentifiedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f4f023c1-37f4-4cdb-a768-20d9eeb9640c",
+            "sourceColumn": "emcr_isrecoveryalternateidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_itdrplansforcriticalsystemsname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4426ffee-cd64-4f79-9d92-6b632b1313a4",
+            "sourceColumn": "emcr_itdrplansforcriticalsystemsname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_dortosmatchname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4231f6dd-1f60-42b0-98ea-7ee4acbd9201",
+            "sourceColumn": "emcr_dortosmatchname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ownersbiatrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "99a1cb8a-8d2d-4ec7-979c-417c139666cc",
+            "sourceColumn": "emcr_ownersbiatrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_strategyselectiontrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "12944c49-d57c-49c6-b0d2-60004fff9d23",
+            "sourceColumn": "emcr_strategyselectiontrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoveryproceduretrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e6fe7a3-6936-4c59-8f9e-0990f3c6311b",
+            "sourceColumn": "emcr_recoveryproceduretrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_exercisetrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1835d18c-f1f5-4dce-ad02-95892c456268",
+            "sourceColumn": "emcr_exercisetrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_numberofbcps",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f2b14199-918b-409d-a9eb-a609d61c9ad2",
+            "sourceColumn": "emcr_numberofbcps",
+            "sourceProviderType": "int",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score Critical Services Percentage",
+            "name": "emcr_numberoforientations",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "f5c618f7-e575-4d3d-931e-51b5c6386e76",
-            "sourceColumn": "emcr_totalscorecriticalservicespercentage",
-            "sourceProviderType": "decimal(38, 0)",
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "55a5cd7c-b761-49cb-95d3-f5b7521457b7",
+            "sourceColumn": "emcr_numberoforientations",
+            "sourceProviderType": "int",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score BCT Percentage",
+            "name": "emcr_numberofdrills",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "0c5264cc-aab5-401d-8012-40ebe629c8dc",
-            "sourceColumn": "emcr_totalscorebctpercentage",
-            "sourceProviderType": "decimal(38, 0)",
+            "dataType": "string",
+            "lineageTag": "362e6c87-f028-4270-ae02-ca906871163f",
+            "sourceColumn": "emcr_numberofdrills",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_numberoftabletopexercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "69263467-1fc4-46de-b100-56eb60392c5d",
+            "sourceColumn": "emcr_numberoftabletopexercises",
+            "sourceProviderType": "int",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score BCE Percentage",
+            "name": "emcr_numberoffullscaleexercises",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "69878c02-e468-465b-ae53-3b968b40fa03",
-            "sourceColumn": "emcr_totalscorebcepercentage",
-            "sourceProviderType": "decimal(38, 0)",
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8ccf0058-641e-4e96-b89a-6e53fac1c05a",
+            "sourceColumn": "emcr_numberoffullscaleexercises",
+            "sourceProviderType": "int",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score Crisis Mgmt Percentage",
+            "name": "emcr_numberoffunctionalexercises",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "5c2a0429-362b-43f8-aa1d-0348220b6a1d",
-            "sourceColumn": "emcr_totalscorecrisismgmtpercentage",
-            "sourceProviderType": "decimal(38, 0)",
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1585489b-22b7-45ce-97b6-c7463558c56b",
+            "sourceColumn": "emcr_numberoffunctionalexercises",
+            "sourceProviderType": "int",
             "summarizeBy": "sum"
           },
           {
-            "name": "Total Score MOC Exercises Percentage",
+            "name": "emcr_ismocannuallyreviewedname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "344f0510-f6d8-41a3-86a8-d17bc77cc4a9",
-            "sourceColumn": "emcr_totalscoremocexercisespercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "7dbe40dc-8e96-4076-bf04-059fa1f9e493",
+            "sourceColumn": "emcr_ismocannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
           },
           {
-            "name": "Total Score MOC Training Percentage",
+            "name": "emcr_ismocalternateidentifiedname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "0e3a5cf0-5861-49a9-ac5e-8b16338627ce",
-            "sourceColumn": "emcr_totalscoremoctrainingpercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "468640a1-c18d-4eaa-ba8d-f60542646437",
+            "sourceColumn": "emcr_ismocalternateidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
           },
           {
-            "name": "Total Score Percentage",
+            "name": "emcr_mocaltsiteprocedurename",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "62fa537a-e029-4710-8341-52a8ebc5c87d",
-            "sourceColumn": "emcr_totalscorepercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "bc9b3b36-7a1e-43f0-8272-9360ca38b612",
+            "sourceColumn": "emcr_mocaltsiteprocedurename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
           },
           {
-            "name": "Total Score Approval Percentage",
+            "name": "emcr_mocaltsitegeneratorname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "cfcaf147-4188-42ab-8c4e-8bc4b847cae5",
-            "sourceColumn": "emcr_totalscoreapprovalpercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "4ea9c137-b07a-44bb-bdf7-81ecac32a7c8",
+            "sourceColumn": "emcr_mocaltsitegeneratorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
           },
           {
-            "name": "Total Score SCM Percentage",
+            "name": "emcr_moccrisiscommunicationplanname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "422cd286-fd96-4f3e-9496-c6afa7f20ae4",
-            "sourceColumn": "emcr_totalscorescmpercentage",
-            "sourceProviderType": "decimal(38, 0)",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "f0a34c50-0764-4ec7-a598-8e2d4339a381",
+            "sourceColumn": "emcr_moccrisiscommunicationplanname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
           },
           {
-            "name": "Total Score Prcnt",
+            "name": "emcr_mocstaffingplanname",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
-            "lineageTag": "2562a845-0c13-411f-81d3-600f5148b88d",
-            "sourceColumn": "Total Score Prcnt",
-            "sourceProviderType": "double",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "fc650aa5-12d1-4546-b310-505c8aa7628d",
+            "sourceColumn": "emcr_mocstaffingplanname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocoverviewavailablename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b50c603c-5051-4907-9df9-2c43400c9702",
+            "sourceColumn": "emcr_mocoverviewavailablename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isics100offeredname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fcbf8d99-a803-4b13-9164-f146b985cabe",
+            "sourceColumn": "emcr_isics100offeredname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocactivationtrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8090ff49-3e21-40fe-8f9a-136fbafd0b6a",
+            "sourceColumn": "emcr_mocactivationtrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocstafftrainedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7154a2f5-750e-4cba-8c01-2f947682eaed",
+            "sourceColumn": "emcr_ismocstafftrainedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocleadershiptrainedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa5d6ec6-be92-4afc-85a8-7734344c8d2a",
+            "sourceColumn": "emcr_ismocleadershiptrainedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocstafforientationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8dd29be9-c678-4339-9ef6-2ca1d46bbf50",
+            "sourceColumn": "emcr_mocstafforientationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moccommunicationsdrillname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "06151355-35d4-48ad-85a9-fa5ca4c4435d",
+            "sourceColumn": "emcr_moccommunicationsdrillname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moctabletopconductedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c384e27-a35e-4c0d-9b8f-14ae1ab7ae7b",
+            "sourceColumn": "emcr_moctabletopconductedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_havemocexercisesoccurredname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "abe21daf-e75e-493c-ba15-d494edf2556d",
+            "sourceColumn": "emcr_havemocexercisesoccurredname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocfullscaleparticipationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e55a87ad-53db-4f61-9f57-229cc6bdd841",
+            "sourceColumn": "emcr_mocfullscaleparticipationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticaldependenciesidentifiedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "957c17d8-1d69-47c8-8b45-5ceb724b1ad5",
+            "sourceColumn": "emcr_criticaldependenciesidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticaldependenciesprioritizedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2af1e8b2-567c-401a-b1f7-a8e7540e1216",
+            "sourceColumn": "emcr_criticaldependenciesprioritizedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_haslossstrategyname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b8c2976c-8bb1-4798-9141-bb7d153a0068",
+            "sourceColumn": "emcr_haslossstrategyname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalvendorannualplanparticipationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6008e8bb-d061-409b-a168-7832b53a64c6",
+            "sourceColumn": "emcr_criticalvendorannualplanparticipationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministryexecapprovalname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59c26fb2-930a-4b1a-a65f-9283165f5068",
+            "sourceColumn": "emcr_ministryexecapprovalname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocaltsiteconnectivityname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8817025f-453f-41a8-afcc-3ab1ce60e310",
+            "sourceColumn": "emcr_mocaltsiteconnectivityname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isescalatedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a93ba914-ee05-4d74-b192-315b302a4246",
+            "sourceColumn": "emcr_isescalatedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_leadershipcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "50c0ff11-b367-475a-979f-ec32c7c9e9df",
+            "sourceColumn": "emcr_leadershipcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_awarenesscomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c8a18bda-5348-4bd2-837c-63c8257f423f",
+            "sourceColumn": "emcr_awarenesscomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalservicescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a0f8dfe8-e11f-4853-9ac3-1672dd2d75bf",
+            "sourceColumn": "emcr_criticalservicescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_bcpcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "866f46f4-700e-478a-b519-ecf5f2af79a1",
+            "sourceColumn": "emcr_bcpcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoverystrategiescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4d7720d-83a4-45d8-a208-58d95d8f7472",
+            "sourceColumn": "emcr_recoverystrategiescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_crisismanagementcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6b1b5df2-cb9a-4434-9f11-45051bc2321c",
+            "sourceColumn": "emcr_crisismanagementcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_businesscontinuityexercisescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eaff0b04-296f-4f4b-ad33-9106284504af",
+            "sourceColumn": "emcr_businesscontinuityexercisescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocexercisescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8bcab5a1-0ea9-463f-9eb4-7523b92e4d33",
+            "sourceColumn": "emcr_mocexercisescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_supplychainmanagementcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4788c56e-bd39-42fc-808b-cecff8dc9858",
+            "sourceColumn": "emcr_supplychainmanagementcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moctrainingcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7639d70f-a122-4b65-926b-74ff50bb6ac9",
+            "sourceColumn": "emcr_moctrainingcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_businesscontinuityexercisesname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "01f89ffe-c7ba-4ac3-9cd2-33d3ece385e5",
+            "sourceColumn": "emcr_businesscontinuityexercisesname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsiteshavegeneratordescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "41ed9cd2-db00-408e-985c-180b0b4e753a",
+            "sourceColumn": "emcr_altsiteshavegeneratordescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsitesindependentconnectivitydescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a28d6ea4-7c78-442e-8dae-538775f6e956",
+            "sourceColumn": "emcr_altsitesindependentconnectivitydescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_itdrplansforcriticalsystemsdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa801988-f322-402d-a3be-984ee73805af",
+            "sourceColumn": "emcr_itdrplansforcriticalsystemsdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_dortosmatchdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5640c40c-2af7-4b09-bdee-7d5649850c88",
+            "sourceColumn": "emcr_dortosmatchdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassitetempproceduresdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "45f2b297-1632-4bd6-a883-504ce1f37b6b",
+            "sourceColumn": "emcr_hassitetempproceduresdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_businesscontinuitytrainingcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "83545310-1f02-4e43-a2ef-433b8f2de699",
+            "sourceColumn": "emcr_businesscontinuitytrainingcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
           }
         ],
-        "lineageTag": "438c4234-47d1-4cab-ac3d-d54ac6b80457",
+        "lineageTag": "0d3d831a-a19c-44e0-84c5-b4babe43e2e4",
         "partitions": [
           {
-            "name": "emcr_readinessindexsurvey",
+            "name": "Score",
             "mode": "directQuery",
+            "queryGroup": "Presentation",
             "source": {
               "expression": [
                 "let",
-                "    Source = CommonDataService.Database(\"emcrdev.crm3.dynamics.com\"),",
-                "    dbo_emcr_readinessindexsurvey = Source{[Schema=\"dbo\",Item=\"emcr_readinessindexsurvey\"]}[Data],",
-                "     #\"Removed Other Columns\" = Table.SelectColumns(dbo_emcr_readinessindexsurvey,{\"emcr_name\", \"emcr_ministry\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\", \"emcr_totalscoreleadership\", \"emcr_totalscorebcmpawareness\", \"emcr_totalscoreleadershippercentage\", \"emcr_totalscorebcmpawarenesspercentage\", \"emcr_totalscorecriticalservices\", \"emcr_totalscorebcp\", \"emcr_totalscorerecoverystrategies\", \"emcr_totalscorebct\", \"emcr_totalscorebce\", \"emcr_totalscorecrisismgmt\", \"emcr_totalscoremoctraining\", \"emcr_totalscoremocexercises\", \"emcr_totalscorescm\", \"emcr_totalscoreapproval\", \"emcr_totalscorebcppercentage\", \"emcr_totalscorerecoverystrategiespercentage\", \"emcr_totalscorecriticalservicespercentage\", \"emcr_totalscorebctpercentage\", \"emcr_totalscorebcepercentage\", \"emcr_totalscorecrisismgmtpercentage\", \"emcr_totalscoremocexercisespercentage\", \"emcr_totalscoremoctrainingpercentage\", \"emcr_totalscorepercentage\", \"emcr_totalscoreapprovalpercentage\", \"emcr_totalscorescmpercentage\"}),",
-                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Other Columns\", \"Total Score Prcnt\", each [emcr_totalscorepercentage] * 100.00),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Total Score Prcnt\", type number}}),",
-                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each ([emcr_ministry] <> null))",
+                "    Source = trans_Scores",
                 "in",
-                "    #\"Filtered Rows\""
+                "    Source"
               ],
               "type": "m"
             }
@@ -716,7 +1892,7 @@
         ]
       },
       {
-        "name": "emcr_year",
+        "name": "MaturityLevel",
         "annotations": [
           {
             "name": "PBI_NavigationStepName",
@@ -729,7 +1905,7 @@
         ],
         "columns": [
           {
-            "name": "emcr_yearname",
+            "name": "EMCRName",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -737,178 +1913,1287 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "43aa4d8f-e9ba-4beb-99e1-c5acfac2e850",
-            "sourceColumn": "emcr_yearname",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "14bb5cd9-c310-4321-a4ec-9b74438554e6",
-        "partitions": [
-          {
-            "name": "emcr_year",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = #\"emcr_readinessindexsurvey\",",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_yearname\"}),",
-                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
-                "in",
-                "    #\"Removed Duplicates\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "emcr_readinessindexsurvey (2)",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "emcr_name",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "8f5fec25-5cdf-4ef6-b981-fbe28e93a733",
-            "sourceColumn": "emcr_name",
+            "lineageTag": "899622d6-7c7a-477d-a11b-20b84977e214",
+            "sourceColumn": "EMCRName",
             "summarizeBy": "none"
           },
-          {
-            "name": "emcr_ministryname",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "870d6d04-ce19-4c92-8a05-776d04a16133",
-            "sourceColumn": "emcr_ministryname",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "emcr_yearname",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "9c2203ed-debb-45bf-ac36-69dc0e6818c6",
-            "sourceColumn": "emcr_yearname",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Attribute",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "e6295c12-cc94-4006-94ae-8f83d8403c32",
-            "sourceColumn": "Attribute",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Value",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "e56e0bde-2c59-4983-bbc8-39cb1e6dd07f",
-            "sourceColumn": "Value",
-            "summarizeBy": "sum"
-          }
-        ],
-        "lineageTag": "227c0cbe-6170-4fc8-b88f-20e433fccb48",
-        "partitions": [
-          {
-            "name": "emcr_readinessindexsurvey (2)",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = #\"emcr_readinessindexsurvey\",",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\", \"emcr_level1foundational\", \"emcr_level2initialprogress\", \"emcr_level3moderateprogress\", \"emcr_level4substantialprogress\", \"emcr_level5objectiveachieved\"}),",
-                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"emcr_name\", \"emcr_ministryname\", \"emcr_yearname\"}, \"Attribute\", \"Value\"),",
-                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Unpivoted Columns\",\"emcr_level\",\"Level \",Replacer.ReplaceText,{\"Attribute\"}),",
-                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"foundational\",\" Foundational\",Replacer.ReplaceText,{\"Attribute\"}),",
-                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"initialprogress\",\" Initial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
-                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"moderateprogress\",\" Moderate Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
-                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"substantialprogress\",\" Substantial Progress\",Replacer.ReplaceText,{\"Attribute\"}),",
-                "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"objectiveachieved\",\" Objective Achieved\",Replacer.ReplaceText,{\"Attribute\"})",
-                "in",
-                "    #\"Replaced Value5\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Ministry",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "emcr_ministryname",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "8a7544b0-7d33-47be-bfeb-1a6c52a84721",
-            "sourceColumn": "emcr_ministryname",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "750135dc-4d73-4efc-80e4-01c5c4e58755",
-        "partitions": [
           {
             "name": "Ministry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad08f6d2-e23f-4b66-85eb-25eba7c49554",
+            "sourceColumn": "Ministry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "609c3111-1059-4c0f-b498-32f2ceb65c75",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Maturity Level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f15ad4eb-d6c8-436d-84cc-b0180df1f0f2",
+            "sourceColumn": "Maturity Level",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Percent Score",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0280a558-fb70-4009-8276-f06a41f9631b",
+            "sourceColumn": "Percent Score",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "0714bce1-a875-4bc6-a246-4fe6d5d8bd22",
+        "partitions": [
+          {
+            "name": "MaturityLevel",
+            "mode": "import",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_MaturityLevel",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Facts",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Values",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b15a576d-7681-414e-8932-2123ff98ed98",
+            "sourceColumn": "Values",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f73357af-ec52-48b1-9fa4-66ab805e67bd",
+        "measures": [
+          {
+            "name": "Current",
+            "expression": "\"Report Generated on \" & NOW()",
+            "lineageTag": "6ea3b1ea-0f69-4121-812c-822a828947d1"
+          },
+          {
+            "name": "MinistryLabel",
+            "expression": "selectedvalue(Ministry[MinistryName])",
+            "lineageTag": "56972294-e921-4c0d-ade2-2b5c631757b0"
+          },
+          {
+            "name": "YearLabel",
+            "expression": "SELECTEDVALUE('Year'[Year])",
+            "lineageTag": "6d2433b6-f9ae-43a5-acd4-c437c24ee255"
+          },
+          {
+            "name": "Yay",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "calculate(sum(MaturityLevel[Percent Score]), FILTER('MaturityLevel', 'MaturityLevel'[Maturity Level] = \"Level 3 Moderate Progress\"))",
+            "lineageTag": "452ad1a5-40ac-4c6f-bbf7-08a4d425236a"
+          },
+          {
+            "name": "Text",
+            "expression": "if([Yay] >= 70, UNICHAR(9733), \"\")",
+            "lineageTag": "cb026574-4878-41c4-a524-fee5f6458906"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Facts",
             "mode": "import",
             "source": {
               "expression": [
                 "let",
-                "    Source = #\"emcr_readinessindexsurvey\",",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"emcr_ministryname\"}),",
-                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\")",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Values = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Values\", type text}})",
                 "in",
-                "    #\"Removed Duplicates\""
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Answers",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "emcr_businesscontinuitytrainingcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f1897c37-cd5c-4bb0-84f9-af0a81e3bf0a",
+            "sourceColumn": "emcr_businesscontinuitytrainingcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassitetempproceduresdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d5fe5d7-f017-4fe6-8501-c4370b8b38c1",
+            "sourceColumn": "emcr_hassitetempproceduresdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_dortosmatchdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bc8740dd-41c5-40f5-8097-d6a4cdb6482e",
+            "sourceColumn": "emcr_dortosmatchdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_itdrplansforcriticalsystemsdescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "024e08db-3a08-4128-a319-e6f1901f3684",
+            "sourceColumn": "emcr_itdrplansforcriticalsystemsdescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsitesindependentconnectivitydescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "42b50396-d857-464b-8889-6536aad2e023",
+            "sourceColumn": "emcr_altsitesindependentconnectivitydescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsiteshavegeneratordescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "50a4535d-70c4-4122-99c0-118c49c4c835",
+            "sourceColumn": "emcr_altsiteshavegeneratordescription",
+            "sourceProviderType": "nvarchar(200)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_businesscontinuityexercisesname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "02b442e2-ffc2-4ecf-8ffc-8f24007b03bd",
+            "sourceColumn": "emcr_businesscontinuityexercisesname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a0a1a424-cc73-48b2-9703-1363ec25a6b5",
+            "sourceColumn": "Year",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moctrainingcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0488f7f7-53ff-43d9-9d97-d9fe1c88493b",
+            "sourceColumn": "emcr_moctrainingcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_supplychainmanagementcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ced6ae0e-5711-48ee-a203-3b49a276e4ac",
+            "sourceColumn": "emcr_supplychainmanagementcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocexercisescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9667140-bd7a-4ba1-a787-6c69d911b7bf",
+            "sourceColumn": "emcr_mocexercisescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_businesscontinuityexercisescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e167490-6e4f-4b48-a7de-b157543aa793",
+            "sourceColumn": "emcr_businesscontinuityexercisescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_crisismanagementcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8fd2f453-3faf-4c13-9b85-d6ca7d646dbb",
+            "sourceColumn": "emcr_crisismanagementcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoverystrategiescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "94b5f1b2-5cfa-471f-bbb9-69c9060fe65d",
+            "sourceColumn": "emcr_recoverystrategiescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_bcpcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b25552f7-558a-4313-81d4-227ca31807aa",
+            "sourceColumn": "emcr_bcpcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalservicescomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c6b6d90-a209-44d0-abb1-2c5add2cc7cd",
+            "sourceColumn": "emcr_criticalservicescomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_awarenesscomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cf2ee1fa-937a-440e-b140-7bc895d134e5",
+            "sourceColumn": "emcr_awarenesscomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_leadershipcomments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e1d5f4a-fbdd-4f82-8f86-83b2417bcc36",
+            "sourceColumn": "emcr_leadershipcomments",
+            "sourceProviderType": "nvarchar(max)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isescalatedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed586327-dec1-4bf7-b28f-76e6889c7000",
+            "sourceColumn": "emcr_isescalatedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocaltsiteconnectivityname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c308b28-3a1e-49cb-9ca2-b02451767421",
+            "sourceColumn": "emcr_mocaltsiteconnectivityname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministryexecapprovalname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f49d13ef-0504-4990-995f-7d38bfc10bc6",
+            "sourceColumn": "emcr_ministryexecapprovalname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalvendorannualplanparticipationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae65e82f-97be-43cb-89cb-48b71c099360",
+            "sourceColumn": "emcr_criticalvendorannualplanparticipationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_haslossstrategyname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6313d103-a4c8-42b4-b5a3-89bb59cd3cfb",
+            "sourceColumn": "emcr_haslossstrategyname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticaldependenciesprioritizedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9996e557-cbd5-439f-9727-81ab675ef052",
+            "sourceColumn": "emcr_criticaldependenciesprioritizedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticaldependenciesidentifiedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8f280dde-3dbe-4c66-83f4-a429c1b74f8e",
+            "sourceColumn": "emcr_criticaldependenciesidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocfullscaleparticipationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0fd9b14f-7b1d-442c-8335-c0667b63726d",
+            "sourceColumn": "emcr_mocfullscaleparticipationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_havemocexercisesoccurredname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4ac7e4a3-99c9-4690-94aa-31b5bf4057e6",
+            "sourceColumn": "emcr_havemocexercisesoccurredname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moctabletopconductedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10842fe4-52c2-47d8-9779-4660e1888634",
+            "sourceColumn": "emcr_moctabletopconductedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moccommunicationsdrillname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c1a437c9-89f1-42ee-8823-bca847d8c7f4",
+            "sourceColumn": "emcr_moccommunicationsdrillname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocstafforientationname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e22e45c6-44f4-4410-9887-2842f738c929",
+            "sourceColumn": "emcr_mocstafforientationname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocleadershiptrainedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3eab9e71-ca81-4a55-82ba-10eb3bf8ce14",
+            "sourceColumn": "emcr_ismocleadershiptrainedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocstafftrainedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a1bc76e6-b10f-4c4f-bb9c-d0a74595f735",
+            "sourceColumn": "emcr_ismocstafftrainedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocactivationtrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9fbe114d-26f0-465e-856a-9dbc9bbef98b",
+            "sourceColumn": "emcr_mocactivationtrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isics100offeredname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38322e28-c2e0-4642-9cb9-50c84e8fd42e",
+            "sourceColumn": "emcr_isics100offeredname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocoverviewavailablename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b8ea4b6-2c92-48f6-b7e2-fd0959ac6bdd",
+            "sourceColumn": "emcr_mocoverviewavailablename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocstaffingplanname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b5f6e197-3bfd-4771-b78c-93605b951ff7",
+            "sourceColumn": "emcr_mocstaffingplanname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_moccrisiscommunicationplanname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d077ed6e-40c5-41fe-b198-c90ae66fd397",
+            "sourceColumn": "emcr_moccrisiscommunicationplanname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocaltsitegeneratorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a0d5e2f-f666-44ac-8ced-2466b0d74e22",
+            "sourceColumn": "emcr_mocaltsitegeneratorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_mocaltsiteprocedurename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa0e5ea7-a909-4ec2-ac19-3d8132134713",
+            "sourceColumn": "emcr_mocaltsiteprocedurename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocalternateidentifiedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "12238f49-4454-4e61-acec-f358e8e1b194",
+            "sourceColumn": "emcr_ismocalternateidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ismocannuallyreviewedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55665404-3fcf-43d3-9870-28436e5bf343",
+            "sourceColumn": "emcr_ismocannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_numberoffunctionalexercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "895c88c8-1aa2-4c16-8900-102974e49627",
+            "sourceColumn": "emcr_numberoffunctionalexercises",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_numberoffullscaleexercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "84dd1635-4e56-4193-b57c-35c65c75cf9c",
+            "sourceColumn": "emcr_numberoffullscaleexercises",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_numberoftabletopexercises",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d20a3c9f-ad16-4084-be1f-53192696befd",
+            "sourceColumn": "emcr_numberoftabletopexercises",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_numberofdrills",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4afa0fc2-fe3c-4b4b-9664-d2efa147416a",
+            "sourceColumn": "emcr_numberofdrills",
+            "sourceProviderType": "nvarchar(100)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_numberoforientations",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b18cf446-4db2-4428-86c3-957b8c869421",
+            "sourceColumn": "emcr_numberoforientations",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_numberofbcps",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bbc176c2-cfde-4eb4-bae6-8226e563c3ef",
+            "sourceColumn": "emcr_numberofbcps",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "emcr_exercisetrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0561ad55-8f3d-4fd3-9188-52b7906245b3",
+            "sourceColumn": "emcr_exercisetrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoveryproceduretrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6a4d176-4a5a-4054-b918-830a1251bfcd",
+            "sourceColumn": "emcr_recoveryproceduretrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_strategyselectiontrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fdd29648-5e01-4023-87a4-f687d4c7fd26",
+            "sourceColumn": "emcr_strategyselectiontrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ownersbiatrainingname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5860d08a-2798-4d54-b90d-f22b404c6d38",
+            "sourceColumn": "emcr_ownersbiatrainingname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_dortosmatchname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6ef24762-096c-4e30-8758-739c30d5b0d2",
+            "sourceColumn": "emcr_dortosmatchname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_itdrplansforcriticalsystemsname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b91ee481-9f1b-47ec-9371-67d7f3baf20f",
+            "sourceColumn": "emcr_itdrplansforcriticalsystemsname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isrecoveryalternateidentifiedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea081c6c-5305-4c49-875c-23a7f2fb0edd",
+            "sourceColumn": "emcr_isrecoveryalternateidentifiedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_arerecordsbackedupname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "97634133-c670-4bf4-80a0-938c8c7827ae",
+            "sourceColumn": "emcr_arerecordsbackedupname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsiteshavegeneratorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2038035-168c-405b-ac69-b80126f857e6",
+            "sourceColumn": "emcr_altsiteshavegeneratorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_altsitesindependentconnectivityname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9d3a27d7-98b5-4a46-aa42-d5b8039f6c75",
+            "sourceColumn": "emcr_altsitesindependentconnectivityname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_communicationmethods",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d98efa3e-289a-4774-8a5c-c7175911c1b7",
+            "sourceColumn": "emcr_communicationmethods",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_lostdatainstructionsname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d6a7b43-eec0-43d5-86e2-14912308bd56",
+            "sourceColumn": "emcr_lostdatainstructionsname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_containsmanualproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8a817971-5236-4a2a-81f2-6680b6a325d8",
+            "sourceColumn": "emcr_containsmanualproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassitetempproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "206354a8-3b31-4354-879d-be3c152ea09a",
+            "sourceColumn": "emcr_hassitetempproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hasnotificationandactivationproceduresname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a0ae48f0-a64b-428e-9cb7-30dfaac7a47e",
+            "sourceColumn": "emcr_hasnotificationandactivationproceduresname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_recoveryservicesannuallyreviewedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "277e5361-766c-4824-b5a2-c0d0442f0787",
+            "sourceColumn": "emcr_recoveryservicesannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_criticalservicesannuallyreviewedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "668dc2bb-6213-4bc5-b0a9-51ffb09aa1a7",
+            "sourceColumn": "emcr_criticalservicesannuallyreviewedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministrylistuptodatename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5de45962-ffca-4336-bf13-c899f4ee93ea",
+            "sourceColumn": "emcr_ministrylistuptodatename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_annualawarenesscampaignname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56bdb06e-c335-44f4-bc46-aa591c846a81",
+            "sourceColumn": "emcr_annualawarenesscampaignname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_areteammembersawarename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d19540a4-91ad-4242-a559-0b8a8d50f8c1",
+            "sourceColumn": "emcr_areteammembersawarename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isministryexecutiveawarename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c45720cd-910e-40e6-af4d-b9da9e28ed94",
+            "sourceColumn": "emcr_isministryexecutiveawarename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_establishedprogramstructurename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d4bf6e95-4a12-4553-ab25-04c9602c4546",
+            "sourceColumn": "emcr_establishedprogramstructurename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Has the Ministry Business Continuity Advisor received training from a Business Continuity Management Program certification body?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f190a17b-d3c8-4c41-96f8-c7e2dbaf850f",
+            "sourceColumn": "Has the Ministry Business Continuity Advisor received training from a Business Continuity Management Program certification body?",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hassteeringcommitteename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ba548abe-3f1d-442f-99d4-2aa8582f25bf",
+            "sourceColumn": "emcr_hassteeringcommitteename",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isplanimplementedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e25b7b38-5011-480b-91ed-601274bee9dc",
+            "sourceColumn": "emcr_isplanimplementedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_hasexecutivesponsorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f35d2b8e-333d-49b8-8664-3658c1e4126c",
+            "sourceColumn": "emcr_hasexecutivesponsorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_isbusinesscontinuitydiscussedname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7b0830fd-16f0-4a0b-b0c9-664186568b23",
+            "sourceColumn": "emcr_isbusinesscontinuitydiscussedname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emcr_ministrybusinesscontinuityadvisorname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52530265-75ee-4c21-8875-1feb4d1996ad",
+            "sourceColumn": "emcr_ministrybusinesscontinuityadvisorname",
+            "sourceProviderType": "nvarchar(75)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MinistryName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf9b5554-f831-4827-8fe9-8329f8f6d002",
+            "sourceColumn": "MinistryName",
+            "sourceProviderType": "nvarchar(160)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MinistryID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ef069c95-3f18-4985-a5b9-b957a420e3c8",
+            "sourceColumn": "MinistryID",
+            "sourceProviderType": "nchar",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMCRName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a86a6be3-743a-4956-a5c8-bd7b4dcd1932",
+            "sourceColumn": "EMCRName",
+            "sourceProviderType": "nvarchar(850)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "214fb08d-756b-4154-91bb-c2182414be6c",
+        "partitions": [
+          {
+            "name": "Answers",
+            "mode": "directQuery",
+            "queryGroup": "Presentation",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = trans_Answers,",
+                "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"emcr_trainingreceivedname\", \"Has the Ministry Business Continuity Advisor received training from a Business Continuity Management Program certification body?\"}})",
+                "in",
+                "    #\"Renamed Columns\""
               ],
               "type": "m"
             }

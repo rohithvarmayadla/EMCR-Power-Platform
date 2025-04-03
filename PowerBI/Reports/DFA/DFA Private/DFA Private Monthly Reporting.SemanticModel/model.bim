@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"DimCaseDetail\",\"DimClaimStatus\",\"DimClaimType\",\"DimEventDetail\",\"DimLocation\",\"DimProjectDetail\",\"DimProjectClaimDetail\",\"FactCase\",\"FactClaim\",\"FactEvent\",\"FactProject\",\"FactProjectClaim\",\"Values\",\"AllDates\",\"AllDates FactCase Bridge\",\"AllDates FactClaim Bridge\",\"AllDates FactEvent Bridge\",\"AllDates FactProject Bridge\",\"AllDates FactProjectClaim Bridge\",\"MonthlyReportMeasures\",\"BridgeDatesUnion\",\"src_DimCaseDetail\",\"src_DimClaimStatus\",\"src_DimEventDetail\",\"src_DimClaimType\",\"src_DimProjectClaimDetail\",\"src_DimLocation\",\"src_DimProjectDetail\",\"src_FactCase\",\"src_FactClaim\",\"src_FactEvent\",\"src_FactProject\",\"src_FactProjectClaim\"]"
+        "value": "[\"DimCaseDetail\",\"DimClaimStatus\",\"DimClaimType\",\"DimEventDetail\",\"DimLocation\",\"DimProjectDetail\",\"DimProjectClaimDetail\",\"FactCase\",\"FactClaim\",\"FactEvent\",\"FactProject\",\"FactProjectClaim\",\"Values\",\"AllDates\",\"AllDates FactCase Bridge\",\"AllDates FactClaim Bridge\",\"AllDates FactEvent Bridge\",\"AllDates FactProject Bridge\",\"AllDates FactProjectClaim Bridge\",\"MonthlyReportMeasures\",\"BridgeDatesUnion\",\"src_DimCaseDetail\",\"src_DimClaimStatus\",\"src_DimEventDetail\",\"src_DimClaimType\",\"src_DimProjectClaimDetail\",\"src_DimLocation\",\"src_DimProjectDetail\",\"src_FactCase\",\"src_FactClaim\",\"src_FactEvent\",\"src_FactProject\",\"src_FactProjectClaim\",\"DimApplicationDetail\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -52621,16 +52621,6 @@
                       "Type": "Noun",
                       "Weight": 0.461
                     }
-                  },
-                  {
-                    "Applications Closed": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -52746,16 +52736,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.461
-                    }
-                  },
-                  {
-                    "Applications": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   },
                   {
@@ -55066,6 +55046,27 @@
                 "Terms": [
                   {
                     "Total Paid": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.cases_appealed": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Cases Appealed"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Appealed": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -78987,6 +78988,13 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13"
+      },
+      {
+        "name": "AutoDetected_4ad6a227-42da-4752-ad04-bd5b8b150670",
+        "fromColumn": "DimApplicationDetailBK",
+        "fromTable": "FactCase",
+        "toColumn": "DimApplicationDetailBK",
+        "toTable": "DimApplicationDetail"
       }
     ],
     "sourceQueryCulture": "en-CA",
@@ -85070,6 +85078,19 @@
                 "relationship": "a942e71c-eaab-4206-a9a1-685b3fe19d4a"
               }
             ]
+          },
+          {
+            "name": "DimApplicationDetailBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a3d56bd-3949-4cea-95d9-5bf3bcdb9260",
+            "sourceColumn": "DimApplicationDetailBK",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "b65cd443-0a35-495f-9de0-82cd67629570",
@@ -91183,7 +91204,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -95514,7 +95535,7 @@
               "expression": [
                 "let",
                 "    Source = FactCase,",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"ClosePayStartedDate\", \"FactCase_Sk\"}),",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"ClosePayStartedDate\", \"AppealReceivedDate\", \"FactCase_Sk\"}),",
                 "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"FactCase_Sk\"}, \"Attribute\", \"Value\"),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Unpivoted Other Columns\",{{\"Attribute\", \"DateKey\"}, {\"Value\", \"DateValue\"}}),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"DateValue\", type date}}),",
@@ -96321,7 +96342,7 @@
           },
           {
             "name": "Applications",
-            "expression": "countrows(FactCase)",
+            "expression": "SWITCH(SELECTEDVALUE(DimCaseDetail[CaseStatus]), \"Closed\", [Cases Closed], \"Open\", [Cases Opened], \"Appeal\", [Cases Appealed])",
             "formatString": "0",
             "lineageTag": "0c93fa89-82b8-4d0b-a899-fdd870e8c071"
           },
@@ -96376,6 +96397,12 @@
             "name": "Total Paid Closed Eligible NODATE",
             "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid]),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\")), \"Currency\")",
             "lineageTag": "c3a0a534-6ebc-462b-b6b3-a1d4b5ef392a"
+          },
+          {
+            "name": "Cases Appealed",
+            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"AppealReceivedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Appeal\"))",
+            "formatString": "0",
+            "lineageTag": "73a68b72-4312-461f-9425-8cf4538ca0bf"
           }
         ],
         "partitions": [
@@ -100472,6 +100499,77 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "DimApplicationDetail",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DimApplicationDetailBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c0d94ce-85d4-45b1-b5f2-ba1dbf26ea5b",
+            "sourceColumn": "DimApplicationDetailBK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WaitingOnApplicantInformation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2eac12db-32d9-472c-a375-fcf4af43316a",
+            "sourceColumn": "WaitingOnApplicantInformation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WaitingOnInsuranceInformation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c619e088-0cf5-405f-8f84-95758b9f9f44",
+            "sourceColumn": "WaitingOnInsuranceInformation",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6519d468-4cbc-4971-80ae-745aef6f2111",
+        "partitions": [
+          {
+            "name": "DimApplicationDetail",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+                "    dfa_rpt_DimApplicationDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimApplicationDetail\"]}[Data]",
+                "in",
+                "    dfa_rpt_DimApplicationDetail"
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
