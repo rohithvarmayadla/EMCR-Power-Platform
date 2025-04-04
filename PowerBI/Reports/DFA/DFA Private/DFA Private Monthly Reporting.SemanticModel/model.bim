@@ -78018,12 +78018,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimCaseDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimCaseDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimCaseDetail"
@@ -78046,7 +78046,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimStatus = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimStatus\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimStatus"
@@ -78069,7 +78069,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimEventDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimEventDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimEventDetail"
@@ -78087,12 +78087,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimType = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimType\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimType"
@@ -78115,7 +78115,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectClaimDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectClaimDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectClaimDetail"
@@ -78138,7 +78138,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimLocation = Source{[Schema=\"dfa_rpt\",Item=\"DimLocation\"]}[Data]",
           "in",
           "    dfa_rpt_DimLocation"
@@ -78161,7 +78161,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectDetail"
@@ -78184,7 +78184,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactCase = Source{[Schema=\"dfa_rpt\",Item=\"FactCase\"]}[Data]",
           "in",
           "    dfa_rpt_FactCase"
@@ -78207,7 +78207,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactClaim"
@@ -78225,12 +78225,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactEvent = Source{[Schema=\"dfa_rpt\",Item=\"FactEvent\"]}[Data]",
           "in",
           "    dfa_rpt_FactEvent"
@@ -78253,7 +78253,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProject = Source{[Schema=\"dfa_rpt\",Item=\"FactProject\"]}[Data]",
           "in",
           "    dfa_rpt_FactProject"
@@ -78276,7 +78276,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProjectClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactProjectClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactProjectClaim"
@@ -78995,6 +78995,14 @@
         "fromTable": "FactCase",
         "toColumn": "DimApplicationDetailBK",
         "toTable": "DimApplicationDetail"
+      },
+      {
+        "name": "a664c79e-67e7-4292-a805-d335cf739eee",
+        "fromColumn": "AppealReceivedDate",
+        "fromTable": "FactCase",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad"
       }
     ],
     "sourceQueryCulture": "en-CA",
@@ -85091,6 +85099,31 @@
             "lineageTag": "7a3d56bd-3949-4cea-95d9-5bf3bcdb9260",
             "sourceColumn": "DimApplicationDetailBK",
             "summarizeBy": "none"
+          },
+          {
+            "name": "AppealReceivedDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "911877b3-bc4c-4337-b7c2-00d14b97b0dc",
+            "sourceColumn": "AppealReceivedDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad"
+                },
+                "isDefault": true,
+                "relationship": "a664c79e-67e7-4292-a805-d335cf739eee"
+              }
+            ]
           }
         ],
         "lineageTag": "b65cd443-0a35-495f-9de0-82cd67629570",
@@ -91204,7 +91237,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -94427,7 +94460,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+                "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
                 "    dbo_D_DATE = Source{[Schema=\"dbo\",Item=\"D_DATE\"]}[Data],",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_D_DATE,{{\"CAL_DAY_DT\", type date}})",
                 "in",
@@ -96403,6 +96436,28 @@
             "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"AppealReceivedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Appeal\"))",
             "formatString": "0",
             "lineageTag": "73a68b72-4312-461f-9425-8cf4538ca0bf"
+          },
+          {
+            "name": "Waiting on Applicant Info",
+            "expression": [
+              "",
+              "var number = calculate([Cases Opened], DimApplicationDetail[WaitingOnApplicantInformation] = \"Yes\")",
+              "var removeblank = if(ISBLANK(number), 0, number)",
+              "return removeblank"
+            ],
+            "formatString": "0",
+            "lineageTag": "8a835960-3e27-4318-b2ba-f49b12639af1"
+          },
+          {
+            "name": "Waiting on Insurance Info",
+            "expression": [
+              "",
+              "var number = calculate([Cases Opened], DimApplicationDetail[WaitingOnInsuranceInformation] = \"Yes\")",
+              "var removeblank = if(ISBLANK(number), 0, number)",
+              "return removeblank"
+            ],
+            "formatString": "0",
+            "lineageTag": "fccd912d-791d-453c-999d-044dd111ba89"
           }
         ],
         "partitions": [
@@ -100509,7 +100564,7 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -100561,7 +100616,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+                "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
                 "    dfa_rpt_DimApplicationDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimApplicationDetail\"]}[Data]",
                 "in",
                 "    dfa_rpt_DimApplicationDetail"
@@ -100570,6 +100625,207 @@
             }
           }
         ]
+      },
+      {
+        "name": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "b7e3e173-d411-4971-8b43-cb8b4ca48469",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "82af4378-6d52-4dd6-ac50-6fafa2064ec3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "774b68e3-789c-489d-8ad3-039844bedd83",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "925aa96c-81c5-414b-be7a-69b0cc5e19b2",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "0f9a5391-a4fc-41f4-aba2-26b0269815ac",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "17c172ac-37ae-4da5-9709-56f04e604af2",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "ff29d894-cc9c-437e-993d-f1cb7627b6a6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9c417c47-3b85-4a9f-9279-ebe132bcc350",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "157c098b-193b-4c9e-b63b-b621cb76b34f",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "e3d79b75-90ea-49f1-86df-1370560bf322",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "4713521e-ea57-4994-a912-8e5fca1ee13e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "8260f343-3401-464f-8ea7-316dede99803"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "c5c1685b-a072-4084-9776-3156a753ded5",
+        "partitions": [
+          {
+            "name": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('FactCase'[AppealReceivedDate])), 1, 1), Date(Year(MAX('FactCase'[AppealReceivedDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }
