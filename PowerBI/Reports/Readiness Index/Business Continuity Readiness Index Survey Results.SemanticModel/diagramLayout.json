@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 89.333335876464844,
+        "y": 9.3333330154418945
       },
       "nodes": [
         {
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 708.18475118062975,
-            "y": 44.875
+            "x": 858.18475118062975,
+            "y": 140.875
           },
           "nodeIndex": "MaturityLevel",
           "nodeLineageTag": "0714bce1-a875-4bc6-a246-4fe6d5d8bd22",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 372.36163941535983,
-            "y": 277.875
+            "x": 378.36163941535983,
+            "y": 332.875
           },
           "nodeIndex": "Score",
           "nodeLineageTag": "0d3d831a-a19c-44e0-84c5-b4babe43e2e4",
@@ -82,6 +82,32 @@
           "nodeLineageTag": "214fb08d-756b-4154-91bb-c2182414be6c",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 399.33334350585938,
+            "y": 0
+          },
+          "nodeIndex": "SystemUser",
+          "nodeLineageTag": "9bd013c8-cdc3-45f7-938e-bb840432c289",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 471.33334350585938,
+            "y": 156.97005458867096
+          },
+          "nodeIndex": "UserBridge",
+          "nodeLineageTag": "0626b044-b1a8-4e6f-be0e-57429bfa30d1",
+          "size": {
+            "height": 104,
             "width": 234
           },
           "zIndex": 0
