@@ -13052,12 +13052,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_FactEvacuees = Source{[Schema=\"era_rpt\",Item=\"FactEvacuees\"]}[Data]",
           "in",
           "    era_rpt_FactEvacuees"
@@ -13075,12 +13075,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_FactSupport = Source{[Schema=\"era_rpt\",Item=\"FactSupport\"]}[Data]",
           "in",
           "    era_rpt_FactSupport"
@@ -13098,12 +13098,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_DimTask = Source{[Schema=\"era_rpt\",Item=\"DimTask\"]}[Data]",
           "in",
           "    era_rpt_DimTask"
@@ -13121,12 +13121,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_FactActiveTask = Source{[Schema=\"era_rpt\",Item=\"FactActiveTask\"]}[Data]",
           "in",
           "    era_rpt_FactActiveTask"
@@ -13149,7 +13149,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_DimSupportDeliveryType = Source{[Schema=\"era_rpt\",Item=\"DimSupportDeliveryType\"]}[Data]",
           "in",
           "    era_rpt_DimSupportDeliveryType"
@@ -13167,12 +13167,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_DimSupportType = Source{[Schema=\"era_rpt\",Item=\"DimSupportType\"]}[Data]",
           "in",
           "    era_rpt_DimSupportType"
@@ -13190,12 +13190,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    era_rpt_DimLocation = Source{[Schema=\"era_rpt\",Item=\"DimLocation\"]}[Data]",
           "in",
           "    era_rpt_DimLocation"
@@ -13213,12 +13213,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"embc\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"embc\"),",
           "    dbo_D_DATE = Source{[Schema=\"dbo\",Item=\"D_DATE\"]}[Data]",
           "in",
           "    dbo_D_DATE"
@@ -13236,12 +13236,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"embc\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"embc\"),",
           "    era_rpt_DimEvacuationFile = Source{[Schema=\"era_rpt\",Item=\"DimEvacuationFile\"]}[Data]",
           "in",
           "    era_rpt_DimEvacuationFile"
