@@ -55077,17 +55077,17 @@
                   }
                 ]
               },
-              "monthlyreportmeasures.total_paid_closed_eligible_nodate": {
+              "monthlyreportmeasures.cases_opened_nodate": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "MonthlyReportMeasures",
-                    "ConceptualProperty": "Total Paid Closed Eligible NODATE"
+                    "ConceptualProperty": "Cases Opened NODATE"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "Total Paid Closed Eligible": {
+                    "Applications": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -55097,6 +55097,15 @@
                     }
                   }
                 ]
+              },
+              "monthlyreportmeasures.total_paid_closed_eligible_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Total Paid Closed Eligible NODATE"
+                  }
+                },
+                "State": "Generated"
               },
               "time_series": {
                 "Definition": {
@@ -81711,7 +81720,7 @@
               "   DimCaseDetail[CaseStatus] = \"Appeal\", \"Closed Appealed\",if(",
               "   DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\", \"Closed Eligible\", IF(",
               "    DimCaseDetail[EligibilityStatus] in {\"Ineligible\",\"Withdrawn\"} && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
-              "        DimCaseDetail[BPFStage] in {\"Checking Criteria\", \"Develop Files\"} && DimCaseDetail[CaseStatus] <> \"Closed\", \"Under Review\", if(",
+              "        (DimCaseDetail[BPFStage] in {\"Checking Criteria\", \"Develop Files\"} || DimCaseDetail[EligibilityStatus] = \"Under Review\") && DimCaseDetail[CaseStatus] <> \"Closed\", \"Under Review\", if(",
               "            DimCaseDetail[BPFStage] = \"Assess Damage\" && DimCaseDetail[CaseStatus] <> \"Closed\", \"Assigned To Evaluator\", if(",
               "                DimCaseDetail[BPFStage] = \"Review Report\"&& DimCaseDetail[CaseStatus] <> \"Closed\", \"Payment Validations\", \"Unknown\"",
               "    ))))))"
@@ -92676,7 +92685,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -96213,7 +96222,7 @@
         "measures": [
           {
             "name": "Cases Opened",
-            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"))",
             "formatString": "0",
             "lineageTag": "5356934c-ad35-4a31-bb84-9135de675fa6"
           },
@@ -96328,13 +96337,13 @@
           },
           {
             "name": "Applications Closed Ineligible",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"FileClosedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
             "formatString": "0",
             "lineageTag": "a9b7dcac-e95d-4872-b602-d4b37f735fa9"
           },
           {
             "name": "Applications Closed Withdrawn",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"FileClosedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
             "formatString": "0",
             "lineageTag": "bf037e49-a03b-431b-9c79-7e0161c6b1bd"
           },
@@ -96433,7 +96442,7 @@
           },
           {
             "name": "Cases Appealed",
-            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"AppealReceivedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Appeal\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Appeal\"))",
             "formatString": "0",
             "lineageTag": "73a68b72-4312-461f-9425-8cf4538ca0bf"
           },
@@ -96458,6 +96467,12 @@
             ],
             "formatString": "0",
             "lineageTag": "fccd912d-791d-453c-999d-044dd111ba89"
+          },
+          {
+            "name": "Cases Opened NODATE",
+            "expression": "calculate(countrows('FactCase'))",
+            "formatString": "0",
+            "lineageTag": "7da8af26-763f-4f2e-b542-138e42f6ad52"
           }
         ],
         "partitions": [
