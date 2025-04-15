@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 1612.3735364644313,
-        "y": 502.85714285714289
+        "y": 645.71428571428578
       },
       "nodes": [
         {
@@ -269,6 +269,19 @@
             "width": 234
           },
           "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1.1354993550563108,
+            "y": 1599.8619205320911
+          },
+          "nodeIndex": "DimApplicationDetail",
+          "nodeLineageTag": "6519d468-4cbc-4971-80ae-745aef6f2111",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

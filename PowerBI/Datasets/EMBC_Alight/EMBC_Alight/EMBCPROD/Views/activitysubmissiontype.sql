@@ -1,0 +1,1 @@
+﻿CREATE VIEW [EMBCPROD].[activitysubmissiontype]AS SELECT id,DTYPE,activityid,activityname FROM [Eteam_Ora].[activitysubmissiontype]  UNION ALL   SELECT id,DTYPE,activityid,activityname FROM [Eteam].[activitysubmissiontype]

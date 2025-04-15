@@ -1,0 +1,1 @@
+﻿CREATE VIEW [EMBCPROD].[template_categories]AS SELECT template_categories_id,category,id FROM [Eteam_Ora].[template_categories]  UNION ALL   SELECT template_categories_id,category,id FROM [Eteam].[template_categories]

@@ -1,0 +1,1 @@
+﻿CREATE VIEW [EMBCPROD].[formtemplate_languages]AS SELECT formtemplate_languages_id,language,id FROM [Eteam_Ora].[formtemplate_languages]  UNION ALL   SELECT formtemplate_languages_id,language,id FROM [Eteam].[formtemplate_languages]

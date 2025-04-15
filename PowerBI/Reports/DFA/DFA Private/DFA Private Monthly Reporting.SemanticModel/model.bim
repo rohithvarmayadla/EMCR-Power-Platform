@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"DimCaseDetail\",\"DimClaimStatus\",\"DimClaimType\",\"DimEventDetail\",\"DimLocation\",\"DimProjectDetail\",\"DimProjectClaimDetail\",\"FactCase\",\"FactClaim\",\"FactEvent\",\"FactProject\",\"FactProjectClaim\",\"Values\",\"AllDates\",\"AllDates FactCase Bridge\",\"AllDates FactClaim Bridge\",\"AllDates FactEvent Bridge\",\"AllDates FactProject Bridge\",\"AllDates FactProjectClaim Bridge\",\"MonthlyReportMeasures\",\"BridgeDatesUnion\",\"src_DimCaseDetail\",\"src_DimClaimStatus\",\"src_DimEventDetail\",\"src_DimClaimType\",\"src_DimProjectClaimDetail\",\"src_DimLocation\",\"src_DimProjectDetail\",\"src_FactCase\",\"src_FactClaim\",\"src_FactEvent\",\"src_FactProject\",\"src_FactProjectClaim\"]"
+        "value": "[\"DimCaseDetail\",\"DimClaimStatus\",\"DimClaimType\",\"DimEventDetail\",\"DimLocation\",\"DimProjectDetail\",\"DimProjectClaimDetail\",\"FactCase\",\"FactClaim\",\"FactEvent\",\"FactProject\",\"FactProjectClaim\",\"Values\",\"AllDates\",\"AllDates FactCase Bridge\",\"AllDates FactClaim Bridge\",\"AllDates FactEvent Bridge\",\"AllDates FactProject Bridge\",\"AllDates FactProjectClaim Bridge\",\"MonthlyReportMeasures\",\"BridgeDatesUnion\",\"src_DimCaseDetail\",\"src_DimClaimStatus\",\"src_DimEventDetail\",\"src_DimClaimType\",\"src_DimProjectClaimDetail\",\"src_DimLocation\",\"src_DimProjectDetail\",\"src_FactCase\",\"src_FactClaim\",\"src_FactEvent\",\"src_FactProject\",\"src_FactProjectClaim\",\"DimApplicationDetail\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.782.0 (24.11)"
+        "value": "2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a"
       },
       {
         "name": "PBI_ProTooling",
@@ -6646,7 +6646,7 @@
                     }
                   },
                   {
-                    "Community Application Status": {
+                    "Application Status": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -6782,16 +6782,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Community": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -13250,6 +13240,16 @@
                       "Type": "Noun",
                       "Weight": 0.757
                     }
+                  },
+                  {
+                    "First Nations Community": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -17447,6 +17447,16 @@
                       "Type": "Noun",
                       "Weight": 0.466
                     }
+                  },
+                  {
+                    "Location": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -19955,16 +19965,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Project Status": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -52621,16 +52621,6 @@
                       "Type": "Noun",
                       "Weight": 0.461
                     }
-                  },
-                  {
-                    "Applications Closed": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -52895,16 +52885,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.482
-                    }
-                  },
-                  {
-                    "Total Committed Funds Unspent": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -53910,16 +53890,6 @@
                       "Type": "Noun",
                       "Weight": 0.605
                     }
-                  },
-                  {
-                    "Total Committed Funds Unspent": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -53977,16 +53947,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.476
-                    }
-                  },
-                  {
-                    "Community Applications Open": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -54139,16 +54099,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.748
-                    }
-                  },
-                  {
-                    "Total Paid": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -54959,6 +54909,111 @@
                   "Value": "Hidden"
                 }
               },
+              "monthlyreportmeasures.applications_assigned_to_evaluator_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Assigned to Evaluator NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Assigned to Evaluator": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_closed_eligible_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Closed Eligible NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Closed Eligible": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_closed_ineligible_withdrawn_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Closed Ineligible/Withdrawn NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Closed Ineligible/Withdrawn": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_under_review_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Under Review NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Under Review": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.applications_waiting_on_payment_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Applications Waiting on Payment NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Waiting on Payment Validations": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
               "monthlyreportmeasures.case_total_paid": {
                 "Definition": {
                   "Binding": {
@@ -54979,6 +55034,78 @@
                     }
                   }
                 ]
+              },
+              "monthlyreportmeasures.case_total_paid_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Case Total Paid NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Paid": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.cases_appealed": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Cases Appealed"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications Appealed": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.cases_opened_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Cases Opened NODATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Applications": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "monthlyreportmeasures.total_paid_closed_eligible_nodate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MonthlyReportMeasures",
+                    "ConceptualProperty": "Total Paid Closed Eligible NODATE"
+                  }
+                },
+                "State": "Generated"
               },
               "time_series": {
                 "Definition": {
@@ -77905,7 +78032,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimCaseDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimCaseDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimCaseDetail"
@@ -77928,7 +78055,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimStatus = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimStatus\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimStatus"
@@ -77951,7 +78078,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimEventDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimEventDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimEventDetail"
@@ -77969,12 +78096,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimClaimType = Source{[Schema=\"dfa_rpt\",Item=\"DimClaimType\"]}[Data]",
           "in",
           "    dfa_rpt_DimClaimType"
@@ -77997,7 +78124,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectClaimDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectClaimDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectClaimDetail"
@@ -78020,7 +78147,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimLocation = Source{[Schema=\"dfa_rpt\",Item=\"DimLocation\"]}[Data]",
           "in",
           "    dfa_rpt_DimLocation"
@@ -78043,7 +78170,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_DimProjectDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimProjectDetail\"]}[Data]",
           "in",
           "    dfa_rpt_DimProjectDetail"
@@ -78066,7 +78193,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactCase = Source{[Schema=\"dfa_rpt\",Item=\"FactCase\"]}[Data]",
           "in",
           "    dfa_rpt_FactCase"
@@ -78089,7 +78216,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactClaim"
@@ -78112,7 +78239,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactEvent = Source{[Schema=\"dfa_rpt\",Item=\"FactEvent\"]}[Data]",
           "in",
           "    dfa_rpt_FactEvent"
@@ -78135,7 +78262,7 @@
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProject = Source{[Schema=\"dfa_rpt\",Item=\"FactProject\"]}[Data]",
           "in",
           "    dfa_rpt_FactProject"
@@ -78153,12 +78280,12 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "expression": [
           "let",
-          "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+          "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
           "    dfa_rpt_FactProjectClaim = Source{[Schema=\"dfa_rpt\",Item=\"FactProjectClaim\"]}[Data]",
           "in",
           "    dfa_rpt_FactProjectClaim"
@@ -78870,6 +78997,21 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_62334ef7-3b0f-4e1e-804c-9cafbc19cb13"
+      },
+      {
+        "name": "AutoDetected_4ad6a227-42da-4752-ad04-bd5b8b150670",
+        "fromColumn": "DimApplicationDetailBK",
+        "fromTable": "FactCase",
+        "toColumn": "DimApplicationDetailBK",
+        "toTable": "DimApplicationDetail"
+      },
+      {
+        "name": "a664c79e-67e7-4292-a805-d335cf739eee",
+        "fromColumn": "AppealReceivedDate",
+        "fromTable": "FactCase",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad"
       }
     ],
     "sourceQueryCulture": "en-CA",
@@ -81550,6 +81692,43 @@
             "lineageTag": "8e1bfc1a-904b-4e2a-81f0-688b5ee6861e",
             "sourceColumn": "WereYouVacantDuringTheEvent",
             "summarizeBy": "none"
+          },
+          {
+            "name": "BPFStage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a060b5c7-9fc8-4e4d-aeed-f0c58cafade0",
+            "sourceColumn": "BPFStage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AppCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "if(",
+              "   DimCaseDetail[CaseStatus] = \"Appeal\", \"Closed Appealed\",if(",
+              "   DimCaseDetail[EligibilityStatus] = \"Eligible\" && DimCaseDetail[CaseStatus] = \"Closed\", \"Closed Eligible\", IF(",
+              "    DimCaseDetail[EligibilityStatus] in {\"Ineligible\",\"Withdrawn\"} && DimCaseDetail[CaseStatus] = \"Closed\", \"Ineligible\\Withdrawn\", IF(",
+              "        (DimCaseDetail[BPFStage] in {\"Checking Criteria\", \"Develop Files\"} || DimCaseDetail[EligibilityStatus] = \"Under Review\") && DimCaseDetail[CaseStatus] <> \"Closed\", \"Under Review\", if(",
+              "            DimCaseDetail[BPFStage] = \"Assess Damage\" && DimCaseDetail[CaseStatus] <> \"Closed\", \"Assigned To Evaluator\", if(",
+              "                DimCaseDetail[BPFStage] = \"Review Report\"&& DimCaseDetail[CaseStatus] <> \"Closed\", \"Payment Validations\", \"Unknown\"",
+              "    ))))))"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "e24cc211-eaf3-4f09-b079-c3bc8b36a551",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "33595b0c-57a1-450e-985d-97900f7fad30",
@@ -81893,7 +82072,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -83299,7 +83478,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -84914,6 +85093,44 @@
                 },
                 "isDefault": true,
                 "relationship": "a942e71c-eaab-4206-a9a1-685b3fe19d4a"
+              }
+            ]
+          },
+          {
+            "name": "DimApplicationDetailBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a3d56bd-3949-4cea-95d9-5bf3bcdb9260",
+            "sourceColumn": "DimApplicationDetailBK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AppealReceivedDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "911877b3-bc4c-4337-b7c2-00d14b97b0dc",
+            "sourceColumn": "AppealReceivedDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad"
+                },
+                "isDefault": true,
+                "relationship": "a664c79e-67e7-4292-a805-d335cf739eee"
               }
             ]
           }
@@ -91029,7 +91246,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -92468,7 +92685,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -94252,7 +94469,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\"subside.idir.bcgov\", \"EMBC\"),",
+                "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
                 "    dbo_D_DATE = Source{[Schema=\"dbo\",Item=\"D_DATE\"]}[Data],",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_D_DATE,{{\"CAL_DAY_DT\", type date}})",
                 "in",
@@ -95360,7 +95577,7 @@
               "expression": [
                 "let",
                 "    Source = FactCase,",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"ClosePayStartedDate\", \"FactCase_Sk\"}),",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"CreatedDate\", \"TotalFederalClaimAmountDate\", \"TotalIneligibleAmountDate\", \"TotalProvincialEligibleAmountDate\", \"SecondaryApplicantSignedDate\", \"PrimaryApplicantSignedDate\", \"LetterOfAcknowledgmentDate\", \"EvaluationReportReceivedDate\", \"ApplicantContactedDate\", \"AssignedDate\", \"AssignedToFMDate\", \"ReceivedByFMDate\", \"EvaluationFileReceivedDate\", \"FileClosedDate\", \"OfApplicantSiteVisitDate\", \"DamageDate\", \"DamageToDate\", \"ReceivedDate\", \"ReportCompletedDate\", \"ReturnToTheResidenceDate\", \"CRPReceivedDate\", \"BringForwardDate\", \"BPFFinishedDate\", \"ClosePayStartedDate\", \"AppealReceivedDate\", \"FactCase_Sk\"}),",
                 "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Removed Other Columns\", {\"FactCase_Sk\"}, \"Attribute\", \"Value\"),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Unpivoted Other Columns\",{{\"Attribute\", \"DateKey\"}, {\"Value\", \"DateValue\"}}),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"DateValue\", type date}}),",
@@ -96005,7 +96222,7 @@
         "measures": [
           {
             "name": "Cases Opened",
-            "expression": "calculate(count('FactCase'[DimCaseBK]), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"))",
             "formatString": "0",
             "lineageTag": "5356934c-ad35-4a31-bb84-9135de675fa6"
           },
@@ -96120,13 +96337,13 @@
           },
           {
             "name": "Applications Closed Ineligible",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"FileClosedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
             "formatString": "0",
             "lineageTag": "a9b7dcac-e95d-4872-b602-d4b37f735fa9"
           },
           {
             "name": "Applications Closed Withdrawn",
-            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ClosePayStartedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"FileClosedDate\"), FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
             "formatString": "0",
             "lineageTag": "bf037e49-a03b-431b-9c79-7e0161c6b1bd"
           },
@@ -96140,6 +96357,122 @@
             "name": "Case Total Paid",
             "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid]), FILTER('AllDates FactCase Bridge', [DateKey]=\"ClosePayStartedDate\")), \"Currency\")",
             "lineageTag": "5908efa4-afbe-4f8f-8314-7a5ebd2c1c61"
+          },
+          {
+            "name": "Applications Closed Ineligible/Withdrawn",
+            "expression": "calculate([Applications Closed Ineligible] + [Applications Closed Withdrawn])",
+            "formatString": "0",
+            "lineageTag": "0f905ff1-d743-45d0-b1ae-5d314db0bc4c"
+          },
+          {
+            "name": "Applications Under Review",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Checking Criteria\"&& not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "1abc064b-214f-48c9-b96f-7eb7e53eb74b"
+          },
+          {
+            "name": "Applications Assigned to Evaluator",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\"&& not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "a7d668d0-2c59-4d03-8848-590318cce43a"
+          },
+          {
+            "name": "Applications Waiting on Payment",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"CreatedDate\"), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "da9ac7e4-e441-439a-b890-14dc578fe42c"
+          },
+          {
+            "name": "Applications",
+            "expression": "SWITCH(SELECTEDVALUE(DimCaseDetail[CaseStatus]), \"Closed\", [Cases Closed], \"Open\", [Cases Opened], \"Appeal\", [Cases Appealed])",
+            "formatString": "0",
+            "lineageTag": "0c93fa89-82b8-4d0b-a899-fdd870e8c071"
+          },
+          {
+            "name": "Applications Assigned to Evaluator NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [BPFStage] = \"Assess Damage\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "0384de77-da32-408b-a08d-9a8c28de6140"
+          },
+          {
+            "name": "Applications Closed Eligible NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "def76875-3ce4-4467-8b6b-85df9df693c8"
+          },
+          {
+            "name": "Applications Closed Ineligible NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Ineligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "18ac07fd-7c1c-406a-91b2-8478b1a02b89"
+          },
+          {
+            "name": "Applications Closed Withdrawn NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Withdrawn\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "3165542d-dc78-474b-a715-36741968e8a9"
+          },
+          {
+            "name": "Applications Closed Ineligible/Withdrawn NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [EligibilityStatus] in {\"Ineligible\", \"Withdrawn\"}), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\"))",
+            "formatString": "0",
+            "lineageTag": "347c5581-5f15-48e8-bb97-f0fd40fb8af5"
+          },
+          {
+            "name": "Applications Under Review NODATE",
+            "expression": "calculate(countrows('FactCase'),  FILTER('DimCaseDetail', [BPFStage] in {\"Checking Criteria\", \"Develop Files\"} && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "9072a9cb-e7ee-4e85-94e7-cf6c99f6f9dc"
+          },
+          {
+            "name": "Applications Waiting on Payment NODATE",
+            "expression": "calculate(countrows('FactCase'), FILTER('DimCaseDetail', [BPFStage] = \"Review Report\" && not DimCaseDetail[CaseStatus] in {\"Closed\", \"Appeal\"}))",
+            "formatString": "0",
+            "lineageTag": "70365194-56c5-4d2d-99e9-0780d91d4f3a"
+          },
+          {
+            "name": "Case Total Paid NODATE",
+            "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid])), \"Currency\")",
+            "lineageTag": "875d4a8f-eca2-43aa-b5f1-945dd745f196"
+          },
+          {
+            "name": "Total Paid Closed Eligible NODATE",
+            "expression": "FORMAT(CALCULATE(SUM('FactCase'[TotalPaid]),  FILTER('DimCaseDetail', [EligibilityStatus] = \"Eligible\"), FILTER('DimCaseDetail', [CaseStatus] = \"Closed\")), \"Currency\")",
+            "lineageTag": "c3a0a534-6ebc-462b-b6b3-a1d4b5ef392a"
+          },
+          {
+            "name": "Cases Appealed",
+            "expression": "calculate(countrows('FactCase'), FILTER('AllDates FactCase Bridge', 'AllDates FactCase Bridge'[DateKey] = \"ReceivedDate\"), FILTER('DimCaseDetail', [CaseStatus] = \"Appeal\"))",
+            "formatString": "0",
+            "lineageTag": "73a68b72-4312-461f-9425-8cf4538ca0bf"
+          },
+          {
+            "name": "Waiting on Applicant Info",
+            "expression": [
+              "",
+              "var number = calculate([Cases Opened], DimApplicationDetail[WaitingOnApplicantInformation] = \"Yes\")",
+              "var removeblank = if(ISBLANK(number), 0, number)",
+              "return removeblank"
+            ],
+            "formatString": "0",
+            "lineageTag": "8a835960-3e27-4318-b2ba-f49b12639af1"
+          },
+          {
+            "name": "Waiting on Insurance Info",
+            "expression": [
+              "",
+              "var number = calculate([Cases Opened], DimApplicationDetail[WaitingOnInsuranceInformation] = \"Yes\")",
+              "var removeblank = if(ISBLANK(number), 0, number)",
+              "return removeblank"
+            ],
+            "formatString": "0",
+            "lineageTag": "fccd912d-791d-453c-999d-044dd111ba89"
+          },
+          {
+            "name": "Cases Opened NODATE",
+            "expression": "calculate(countrows('FactCase'))",
+            "formatString": "0",
+            "lineageTag": "7da8af26-763f-4f2e-b542-138e42f6ad52"
           }
         ],
         "partitions": [
@@ -100231,6 +100564,278 @@
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(Year(MIN('FactCase'[ClosePayStartedDate])), 1, 1), Date(Year(MAX('FactCase'[ClosePayStartedDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "DimApplicationDetail",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DimApplicationDetailBK",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c0d94ce-85d4-45b1-b5f2-ba1dbf26ea5b",
+            "sourceColumn": "DimApplicationDetailBK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WaitingOnApplicantInformation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2eac12db-32d9-472c-a375-fcf4af43316a",
+            "sourceColumn": "WaitingOnApplicantInformation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WaitingOnInsuranceInformation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c619e088-0cf5-405f-8f84-95758b9f9f44",
+            "sourceColumn": "WaitingOnInsuranceInformation",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6519d468-4cbc-4971-80ae-745aef6f2111",
+        "partitions": [
+          {
+            "name": "DimApplicationDetail",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"alight.idir.bcgov\", \"EMBC\"),",
+                "    dfa_rpt_DimApplicationDetail = Source{[Schema=\"dfa_rpt\",Item=\"DimApplicationDetail\"]}[Data]",
+                "in",
+                "    dfa_rpt_DimApplicationDetail"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "b7e3e173-d411-4971-8b43-cb8b4ca48469",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "82af4378-6d52-4dd6-ac50-6fafa2064ec3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "774b68e3-789c-489d-8ad3-039844bedd83",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "925aa96c-81c5-414b-be7a-69b0cc5e19b2",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "0f9a5391-a4fc-41f4-aba2-26b0269815ac",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "17c172ac-37ae-4da5-9709-56f04e604af2",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "ff29d894-cc9c-437e-993d-f1cb7627b6a6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9c417c47-3b85-4a9f-9279-ebe132bcc350",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "157c098b-193b-4c9e-b63b-b621cb76b34f",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "e3d79b75-90ea-49f1-86df-1370560bf322",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "4713521e-ea57-4994-a912-8e5fca1ee13e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "8260f343-3401-464f-8ea7-316dede99803"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "c5c1685b-a072-4084-9776-3156a753ded5",
+        "partitions": [
+          {
+            "name": "LocalDateTable_58e74573-f416-42e1-a497-9a26627131ad",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('FactCase'[AppealReceivedDate])), 1, 1), Date(Year(MAX('FactCase'[AppealReceivedDate])), 12, 31))",
               "type": "calculated"
             }
           }
